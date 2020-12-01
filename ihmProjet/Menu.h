@@ -2568,16 +2568,3 @@ private: System::Void bRetour_p6_Click(System::Object^ sender, System::EventArgs
 
 };
 }
-
-/*
-			this->panelEmploye->Hide(); 
-			this->panelMenu->Hide();
-			this->panelCommande->Hide();
-			this->panelClient->Hide();
-			this->panelStock->Hide();
-			this->panelStatistiques->Hide();
-			this->panelSimulation->Show();
-
-
-
-*/
