@@ -271,9 +271,10 @@ private: System::Windows::Forms::TextBox^ tQuantiteStock_p4;
 
 
 private: System::Windows::Forms::TextBox^ tDesignation_p4;
+private: System::Windows::Forms::TextBox^ tRechercheArticle_p4;
 
 
-private: System::Windows::Forms::TextBox^ tReferenceArticle_p4;
+
 
 
 
@@ -289,6 +290,30 @@ private: System::Windows::Forms::DataGridView^ dArticle_p4;
 private: System::Windows::Forms::Label^ label73;
 private: System::Windows::Forms::Button^ bRechercheArticle_p4;
 private: System::Windows::Forms::Panel^ panelStatistiques;
+private: System::Windows::Forms::Label^ label53;
+private: System::Windows::Forms::TextBox^ tReferenceArticle_p4;
+private: System::Windows::Forms::Label^ label70;
+private: System::Windows::Forms::DataGridView^ dataGridView6;
+private: System::Windows::Forms::Label^ label61;
+private: System::Windows::Forms::DataGridView^ dataGridView5;
+private: System::Windows::Forms::Label^ label57;
+private: System::Windows::Forms::DataGridView^ dataGridView1;
+private: System::Windows::Forms::Label^ label85;
+private: System::Windows::Forms::Label^ label87;
+private: System::Windows::Forms::DataGridView^ dataGridView4;
+private: System::Windows::Forms::Label^ label86;
+private: System::Windows::Forms::DataGridView^ dataGridView3;
+private: System::Windows::Forms::DataGridView^ dChiffreAffaireMois;
+private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Label^ label82;
+private: System::Windows::Forms::Label^ dProduitSousSeuil_p5;
+private: System::Windows::Forms::Label^ label84;
+private: System::Windows::Forms::DataGridView^ dPanierMoyen_p5;
+private: System::Windows::Forms::DataGridView^ dataGridView2;
+private: System::Windows::Forms::Button^ bRechercheIDemploye_p1;
+private: System::Windows::Forms::TextBox^ tIDemploye_p1;
+private: System::Windows::Forms::Label^ label74;
+
 
 
 
@@ -390,6 +415,9 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->dCommande = (gcnew System::Windows::Forms::DataGridView());
 			this->dDetailCommande_p3 = (gcnew System::Windows::Forms::DataGridView());
 			this->panelEmploye = (gcnew System::Windows::Forms::Panel());
+			this->bRechercheIDemploye_p1 = (gcnew System::Windows::Forms::Button());
+			this->tIDemploye_p1 = (gcnew System::Windows::Forms::TextBox());
+			this->label74 = (gcnew System::Windows::Forms::Label());
 			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->tBoxReponse_p1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->bRetour_p1 = (gcnew System::Windows::Forms::Button());
@@ -453,6 +481,8 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->dClient_p2 = (gcnew System::Windows::Forms::DataGridView());
 			this->dAdresse_p2 = (gcnew System::Windows::Forms::DataGridView());
 			this->panelStock = (gcnew System::Windows::Forms::Panel());
+			this->label53 = (gcnew System::Windows::Forms::Label());
+			this->tReferenceArticle_p4 = (gcnew System::Windows::Forms::TextBox());
 			this->bRechercheArticle_p4 = (gcnew System::Windows::Forms::Button());
 			this->label36 = (gcnew System::Windows::Forms::Label());
 			this->tBoxMessage_p4 = (gcnew System::Windows::Forms::RichTextBox());
@@ -467,7 +497,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->tSeuilReap_p4 = (gcnew System::Windows::Forms::TextBox());
 			this->tQuantiteStock_p4 = (gcnew System::Windows::Forms::TextBox());
 			this->tDesignation_p4 = (gcnew System::Windows::Forms::TextBox());
-			this->tReferenceArticle_p4 = (gcnew System::Windows::Forms::TextBox());
+			this->tRechercheArticle_p4 = (gcnew System::Windows::Forms::TextBox());
 			this->label58 = (gcnew System::Windows::Forms::Label());
 			this->label60 = (gcnew System::Windows::Forms::Label());
 			this->label62 = (gcnew System::Windows::Forms::Label());
@@ -476,6 +506,24 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->dArticle_p4 = (gcnew System::Windows::Forms::DataGridView());
 			this->label73 = (gcnew System::Windows::Forms::Label());
 			this->panelStatistiques = (gcnew System::Windows::Forms::Panel());
+			this->label70 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView6 = (gcnew System::Windows::Forms::DataGridView());
+			this->label61 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
+			this->label57 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->label85 = (gcnew System::Windows::Forms::Label());
+			this->label87 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->label86 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dChiffreAffaireMois = (gcnew System::Windows::Forms::DataGridView());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label82 = (gcnew System::Windows::Forms::Label());
+			this->dProduitSousSeuil_p5 = (gcnew System::Windows::Forms::Label());
+			this->label84 = (gcnew System::Windows::Forms::Label());
+			this->dPanierMoyen_p5 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->panelMenu->SuspendLayout();
 			this->panelCommande->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dDetailPaiement_p3))->BeginInit();
@@ -488,6 +536,15 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dAdresse_p2))->BeginInit();
 			this->panelStock->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dArticle_p4))->BeginInit();
+			this->panelStatistiques->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dChiffreAffaireMois))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dPanierMoyen_p5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -560,6 +617,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->buttonStatistiques->TabIndex = 6;
 			this->buttonStatistiques->Text = L"Statistiques";
 			this->buttonStatistiques->UseVisualStyleBackColor = true;
+			this->buttonStatistiques->Click += gcnew System::EventHandler(this, &MyForm::buttonStatistiques_Click);
 			// 
 			// buttonSimulation
 			// 
@@ -1161,6 +1219,9 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// panelEmploye
 			// 
+			this->panelEmploye->Controls->Add(this->bRechercheIDemploye_p1);
+			this->panelEmploye->Controls->Add(this->tIDemploye_p1);
+			this->panelEmploye->Controls->Add(this->label74);
 			this->panelEmploye->Controls->Add(this->label28);
 			this->panelEmploye->Controls->Add(this->tBoxReponse_p1);
 			this->panelEmploye->Controls->Add(this->bRetour_p1);
@@ -1195,10 +1256,35 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->panelEmploye->Size = System::Drawing::Size(1037, 541);
 			this->panelEmploye->TabIndex = 9;
 			// 
+			// bRechercheIDemploye_p1
+			// 
+			this->bRechercheIDemploye_p1->Location = System::Drawing::Point(111, 74);
+			this->bRechercheIDemploye_p1->Name = L"bRechercheIDemploye_p1";
+			this->bRechercheIDemploye_p1->Size = System::Drawing::Size(87, 19);
+			this->bRechercheIDemploye_p1->TabIndex = 63;
+			this->bRechercheIDemploye_p1->Text = L"Rechercher";
+			this->bRechercheIDemploye_p1->UseVisualStyleBackColor = true;
+			// 
+			// tIDemploye_p1
+			// 
+			this->tIDemploye_p1->Location = System::Drawing::Point(97, 49);
+			this->tIDemploye_p1->Name = L"tIDemploye_p1";
+			this->tIDemploye_p1->Size = System::Drawing::Size(110, 20);
+			this->tIDemploye_p1->TabIndex = 62;
+			// 
+			// label74
+			// 
+			this->label74->AutoSize = true;
+			this->label74->Location = System::Drawing::Point(120, 33);
+			this->label74->Name = L"label74";
+			this->label74->Size = System::Drawing::Size(60, 13);
+			this->label74->TabIndex = 61;
+			this->label74->Text = L"ID employé";
+			// 
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(333, 453);
+			this->label28->Location = System::Drawing::Point(341, 461);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(50, 13);
 			this->label28->TabIndex = 60;
@@ -1208,7 +1294,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			this->tBoxReponse_p1->Location = System::Drawing::Point(336, 469);
 			this->tBoxReponse_p1->Name = L"tBoxReponse_p1";
-			this->tBoxReponse_p1->Size = System::Drawing::Size(685, 40);
+			this->tBoxReponse_p1->Size = System::Drawing::Size(685, 64);
 			this->tBoxReponse_p1->TabIndex = 59;
 			this->tBoxReponse_p1->Text = L"";
 			// 
@@ -1233,7 +1319,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// tTypeVoie_p1
 			// 
-			this->tTypeVoie_p1->Location = System::Drawing::Point(14, 249);
+			this->tTypeVoie_p1->Location = System::Drawing::Point(26, 311);
 			this->tTypeVoie_p1->Name = L"tTypeVoie_p1";
 			this->tTypeVoie_p1->Size = System::Drawing::Size(110, 20);
 			this->tTypeVoie_p1->TabIndex = 26;
@@ -1241,7 +1327,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(11, 232);
+			this->label14->Location = System::Drawing::Point(23, 294);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(69, 13);
 			this->label14->TabIndex = 25;
@@ -1249,7 +1335,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// bAjouter_p1
 			// 
-			this->bAjouter_p1->Location = System::Drawing::Point(155, 370);
+			this->bAjouter_p1->Location = System::Drawing::Point(167, 423);
 			this->bAjouter_p1->Name = L"bAjouter_p1";
 			this->bAjouter_p1->Size = System::Drawing::Size(66, 110);
 			this->bAjouter_p1->TabIndex = 24;
@@ -1258,7 +1344,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// bMaj_p1
 			// 
-			this->bMaj_p1->Location = System::Drawing::Point(70, 370);
+			this->bMaj_p1->Location = System::Drawing::Point(82, 423);
 			this->bMaj_p1->Name = L"bMaj_p1";
 			this->bMaj_p1->Size = System::Drawing::Size(75, 51);
 			this->bMaj_p1->TabIndex = 23;
@@ -1267,7 +1353,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// bSupprimer_p1
 			// 
-			this->bSupprimer_p1->Location = System::Drawing::Point(70, 427);
+			this->bSupprimer_p1->Location = System::Drawing::Point(82, 480);
 			this->bSupprimer_p1->Name = L"bSupprimer_p1";
 			this->bSupprimer_p1->Size = System::Drawing::Size(75, 53);
 			this->bSupprimer_p1->TabIndex = 22;
@@ -1276,63 +1362,63 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// tVille_p1
 			// 
-			this->tVille_p1->Location = System::Drawing::Point(148, 299);
+			this->tVille_p1->Location = System::Drawing::Point(160, 361);
 			this->tVille_p1->Name = L"tVille_p1";
 			this->tVille_p1->Size = System::Drawing::Size(110, 20);
 			this->tVille_p1->TabIndex = 21;
 			// 
 			// tCodePostal_p1
 			// 
-			this->tCodePostal_p1->Location = System::Drawing::Point(14, 299);
+			this->tCodePostal_p1->Location = System::Drawing::Point(26, 361);
 			this->tCodePostal_p1->Name = L"tCodePostal_p1";
 			this->tCodePostal_p1->Size = System::Drawing::Size(110, 20);
 			this->tCodePostal_p1->TabIndex = 20;
 			// 
 			// tNomVoie_p1
 			// 
-			this->tNomVoie_p1->Location = System::Drawing::Point(149, 249);
+			this->tNomVoie_p1->Location = System::Drawing::Point(161, 311);
 			this->tNomVoie_p1->Name = L"tNomVoie_p1";
 			this->tNomVoie_p1->Size = System::Drawing::Size(110, 20);
 			this->tNomVoie_p1->TabIndex = 19;
 			// 
 			// tCompAdresse_p1
 			// 
-			this->tCompAdresse_p1->Location = System::Drawing::Point(148, 199);
+			this->tCompAdresse_p1->Location = System::Drawing::Point(160, 261);
 			this->tCompAdresse_p1->Name = L"tCompAdresse_p1";
 			this->tCompAdresse_p1->Size = System::Drawing::Size(110, 20);
 			this->tCompAdresse_p1->TabIndex = 18;
 			// 
 			// tNumVoie_p1
 			// 
-			this->tNumVoie_p1->Location = System::Drawing::Point(14, 199);
+			this->tNumVoie_p1->Location = System::Drawing::Point(26, 261);
 			this->tNumVoie_p1->Name = L"tNumVoie_p1";
 			this->tNumVoie_p1->Size = System::Drawing::Size(110, 20);
 			this->tNumVoie_p1->TabIndex = 17;
 			// 
 			// tPrenomSuperieur_p1
 			// 
-			this->tPrenomSuperieur_p1->Location = System::Drawing::Point(148, 112);
+			this->tPrenomSuperieur_p1->Location = System::Drawing::Point(160, 174);
 			this->tPrenomSuperieur_p1->Name = L"tPrenomSuperieur_p1";
 			this->tPrenomSuperieur_p1->Size = System::Drawing::Size(111, 20);
 			this->tPrenomSuperieur_p1->TabIndex = 15;
 			// 
 			// tNomSuperieur_p1
 			// 
-			this->tNomSuperieur_p1->Location = System::Drawing::Point(149, 60);
+			this->tNomSuperieur_p1->Location = System::Drawing::Point(161, 122);
 			this->tNomSuperieur_p1->Name = L"tNomSuperieur_p1";
 			this->tNomSuperieur_p1->Size = System::Drawing::Size(110, 20);
 			this->tNomSuperieur_p1->TabIndex = 14;
 			// 
 			// tPrenom_p1
 			// 
-			this->tPrenom_p1->Location = System::Drawing::Point(14, 112);
+			this->tPrenom_p1->Location = System::Drawing::Point(26, 174);
 			this->tPrenom_p1->Name = L"tPrenom_p1";
 			this->tPrenom_p1->Size = System::Drawing::Size(110, 20);
 			this->tPrenom_p1->TabIndex = 13;
 			// 
 			// tNom_p1
 			// 
-			this->tNom_p1->Location = System::Drawing::Point(14, 60);
+			this->tNom_p1->Location = System::Drawing::Point(26, 122);
 			this->tNom_p1->Name = L"tNom_p1";
 			this->tNom_p1->Size = System::Drawing::Size(110, 20);
 			this->tNom_p1->TabIndex = 12;
@@ -1340,7 +1426,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(148, 283);
+			this->label13->Location = System::Drawing::Point(160, 345);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(26, 13);
 			this->label13->TabIndex = 11;
@@ -1349,7 +1435,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(11, 283);
+			this->label12->Location = System::Drawing::Point(23, 345);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(63, 13);
 			this->label12->TabIndex = 10;
@@ -1358,7 +1444,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(146, 179);
+			this->label11->Location = System::Drawing::Point(158, 241);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(113, 13);
 			this->label11->TabIndex = 9;
@@ -1367,7 +1453,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(11, 179);
+			this->label10->Location = System::Drawing::Point(23, 241);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(82, 13);
 			this->label10->TabIndex = 8;
@@ -1376,7 +1462,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(146, 232);
+			this->label8->Location = System::Drawing::Point(158, 294);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(67, 13);
 			this->label8->TabIndex = 6;
@@ -1385,7 +1471,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(146, 96);
+			this->label7->Location = System::Drawing::Point(158, 158);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(89, 13);
 			this->label7->TabIndex = 5;
@@ -1394,7 +1480,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(146, 44);
+			this->label6->Location = System::Drawing::Point(158, 106);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(75, 13);
 			this->label6->TabIndex = 4;
@@ -1403,7 +1489,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(11, 96);
+			this->label5->Location = System::Drawing::Point(23, 158);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(43, 13);
 			this->label5->TabIndex = 3;
@@ -1412,7 +1498,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(11, 44);
+			this->label4->Location = System::Drawing::Point(23, 106);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(29, 13);
 			this->label4->TabIndex = 2;
@@ -1431,7 +1517,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->labelEmploye->AutoSize = true;
 			this->labelEmploye->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelEmploye->Location = System::Drawing::Point(76, 1);
+			this->labelEmploye->Location = System::Drawing::Point(97, 4);
 			this->labelEmploye->Name = L"labelEmploye";
 			this->labelEmploye->Size = System::Drawing::Size(114, 20);
 			this->labelEmploye->TabIndex = 0;
@@ -1746,6 +1832,8 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// panelStock
 			// 
+			this->panelStock->Controls->Add(this->label53);
+			this->panelStock->Controls->Add(this->tReferenceArticle_p4);
 			this->panelStock->Controls->Add(this->bRechercheArticle_p4);
 			this->panelStock->Controls->Add(this->label36);
 			this->panelStock->Controls->Add(this->tBoxMessage_p4);
@@ -1760,7 +1848,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->panelStock->Controls->Add(this->tSeuilReap_p4);
 			this->panelStock->Controls->Add(this->tQuantiteStock_p4);
 			this->panelStock->Controls->Add(this->tDesignation_p4);
-			this->panelStock->Controls->Add(this->tReferenceArticle_p4);
+			this->panelStock->Controls->Add(this->tRechercheArticle_p4);
 			this->panelStock->Controls->Add(this->label58);
 			this->panelStock->Controls->Add(this->label60);
 			this->panelStock->Controls->Add(this->label62);
@@ -1772,6 +1860,22 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->panelStock->Name = L"panelStock";
 			this->panelStock->Size = System::Drawing::Size(1048, 559);
 			this->panelStock->TabIndex = 12;
+			// 
+			// label53
+			// 
+			this->label53->AutoSize = true;
+			this->label53->Location = System::Drawing::Point(160, 178);
+			this->label53->Name = L"label53";
+			this->label53->Size = System::Drawing::Size(88, 13);
+			this->label53->TabIndex = 92;
+			this->label53->Text = L"Référence article";
+			// 
+			// tReferenceArticle_p4
+			// 
+			this->tReferenceArticle_p4->Location = System::Drawing::Point(163, 192);
+			this->tReferenceArticle_p4->Name = L"tReferenceArticle_p4";
+			this->tReferenceArticle_p4->Size = System::Drawing::Size(109, 20);
+			this->tReferenceArticle_p4->TabIndex = 91;
 			// 
 			// bRechercheArticle_p4
 			// 
@@ -1884,17 +1988,17 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// tDesignation_p4
 			// 
-			this->tDesignation_p4->Location = System::Drawing::Point(66, 192);
+			this->tDesignation_p4->Location = System::Drawing::Point(27, 192);
 			this->tDesignation_p4->Name = L"tDesignation_p4";
-			this->tDesignation_p4->Size = System::Drawing::Size(167, 20);
+			this->tDesignation_p4->Size = System::Drawing::Size(109, 20);
 			this->tDesignation_p4->TabIndex = 73;
 			// 
-			// tReferenceArticle_p4
+			// tRechercheArticle_p4
 			// 
-			this->tReferenceArticle_p4->Location = System::Drawing::Point(93, 84);
-			this->tReferenceArticle_p4->Name = L"tReferenceArticle_p4";
-			this->tReferenceArticle_p4->Size = System::Drawing::Size(110, 20);
-			this->tReferenceArticle_p4->TabIndex = 72;
+			this->tRechercheArticle_p4->Location = System::Drawing::Point(93, 84);
+			this->tRechercheArticle_p4->Name = L"tRechercheArticle_p4";
+			this->tRechercheArticle_p4->Size = System::Drawing::Size(110, 20);
+			this->tRechercheArticle_p4->TabIndex = 72;
 			// 
 			// label58
 			// 
@@ -1926,7 +2030,7 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// label71
 			// 
 			this->label71->AutoSize = true;
-			this->label71->Location = System::Drawing::Point(119, 176);
+			this->label71->Location = System::Drawing::Point(24, 176);
 			this->label71->Name = L"label71";
 			this->label71->Size = System::Drawing::Size(63, 13);
 			this->label71->TabIndex = 64;
@@ -1962,20 +2066,195 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			// 
 			// panelStatistiques
 			// 
+			this->panelStatistiques->Controls->Add(this->label70);
+			this->panelStatistiques->Controls->Add(this->dataGridView6);
+			this->panelStatistiques->Controls->Add(this->label61);
+			this->panelStatistiques->Controls->Add(this->dataGridView5);
+			this->panelStatistiques->Controls->Add(this->label57);
+			this->panelStatistiques->Controls->Add(this->dataGridView1);
+			this->panelStatistiques->Controls->Add(this->label85);
+			this->panelStatistiques->Controls->Add(this->label87);
+			this->panelStatistiques->Controls->Add(this->dataGridView4);
+			this->panelStatistiques->Controls->Add(this->label86);
+			this->panelStatistiques->Controls->Add(this->dataGridView3);
+			this->panelStatistiques->Controls->Add(this->dChiffreAffaireMois);
+			this->panelStatistiques->Controls->Add(this->button1);
+			this->panelStatistiques->Controls->Add(this->label82);
+			this->panelStatistiques->Controls->Add(this->dProduitSousSeuil_p5);
+			this->panelStatistiques->Controls->Add(this->label84);
+			this->panelStatistiques->Controls->Add(this->dPanierMoyen_p5);
+			this->panelStatistiques->Controls->Add(this->dataGridView2);
 			this->panelStatistiques->Location = System::Drawing::Point(0, 0);
 			this->panelStatistiques->Name = L"panelStatistiques";
 			this->panelStatistiques->Size = System::Drawing::Size(1047, 564);
 			this->panelStatistiques->TabIndex = 13;
+			// 
+			// label70
+			// 
+			this->label70->AutoSize = true;
+			this->label70->Location = System::Drawing::Point(64, 200);
+			this->label70->Name = L"label70";
+			this->label70->Size = System::Drawing::Size(205, 13);
+			this->label70->TabIndex = 104;
+			this->label70->Text = L"Produits sous le seuil d\'approvisionnement";
+			// 
+			// dataGridView6
+			// 
+			this->dataGridView6->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView6->Location = System::Drawing::Point(67, 216);
+			this->dataGridView6->Name = L"dataGridView6";
+			this->dataGridView6->Size = System::Drawing::Size(421, 127);
+			this->dataGridView6->TabIndex = 103;
+			// 
+			// label61
+			// 
+			this->label61->AutoSize = true;
+			this->label61->Location = System::Drawing::Point(539, 381);
+			this->label61->Name = L"label61";
+			this->label61->Size = System::Drawing::Size(125, 13);
+			this->label61->TabIndex = 102;
+			this->label61->Text = L"Articles les moins vendus";
+			// 
+			// dataGridView5
+			// 
+			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView5->Location = System::Drawing::Point(542, 396);
+			this->dataGridView5->Name = L"dataGridView5";
+			this->dataGridView5->Size = System::Drawing::Size(421, 127);
+			this->dataGridView5->TabIndex = 101;
+			// 
+			// label57
+			// 
+			this->label57->AutoSize = true;
+			this->label57->Location = System::Drawing::Point(64, 381);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(117, 13);
+			this->label57->TabIndex = 100;
+			this->label57->Text = L"Articles les plus vendus";
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(67, 396);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(421, 127);
+			this->dataGridView1->TabIndex = 99;
+			// 
+			// label85
+			// 
+			this->label85->AutoSize = true;
+			this->label85->Location = System::Drawing::Point(787, 108);
+			this->label85->Name = L"label85";
+			this->label85->Size = System::Drawing::Size(167, 13);
+			this->label85->TabIndex = 98;
+			this->label85->Text = L"Chiffre d\'affaire du mois précédent";
+			// 
+			// label87
+			// 
+			this->label87->AutoSize = true;
+			this->label87->Location = System::Drawing::Point(335, 110);
+			this->label87->Name = L"label87";
+			this->label87->Size = System::Drawing::Size(119, 13);
+			this->label87->TabIndex = 97;
+			this->label87->Text = L"Valeur d\'achat du stock";
+			// 
+			// dataGridView4
+			// 
+			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView4->Location = System::Drawing::Point(303, 123);
+			this->dataGridView4->Name = L"dataGridView4";
+			this->dataGridView4->Size = System::Drawing::Size(185, 35);
+			this->dataGridView4->TabIndex = 96;
+			// 
+			// label86
+			// 
+			this->label86->AutoSize = true;
+			this->label86->Location = System::Drawing::Point(87, 109);
+			this->label86->Name = L"label86";
+			this->label86->Size = System::Drawing::Size(143, 13);
+			this->label86->TabIndex = 95;
+			this->label86->Text = L"Valeur commerciale du stock";
+			// 
+			// dataGridView3
+			// 
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Location = System::Drawing::Point(67, 122);
+			this->dataGridView3->Name = L"dataGridView3";
+			this->dataGridView3->Size = System::Drawing::Size(185, 35);
+			this->dataGridView3->TabIndex = 94;
+			// 
+			// dChiffreAffaireMois
+			// 
+			this->dChiffreAffaireMois->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dChiffreAffaireMois->Location = System::Drawing::Point(542, 123);
+			this->dChiffreAffaireMois->Name = L"dChiffreAffaireMois";
+			this->dChiffreAffaireMois->Size = System::Drawing::Size(185, 35);
+			this->dChiffreAffaireMois->TabIndex = 92;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(3, 3);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(37, 23);
+			this->button1->TabIndex = 89;
+			this->button1->Text = L"<<";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// label82
+			// 
+			this->label82->AutoSize = true;
+			this->label82->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label82->Location = System::Drawing::Point(98, 15);
+			this->label82->Name = L"label82";
+			this->label82->Size = System::Drawing::Size(137, 20);
+			this->label82->TabIndex = 64;
+			this->label82->Text = L"Menu Statistiques";
+			// 
+			// dProduitSousSeuil_p5
+			// 
+			this->dProduitSousSeuil_p5->AutoSize = true;
+			this->dProduitSousSeuil_p5->Location = System::Drawing::Point(539, 200);
+			this->dProduitSousSeuil_p5->Name = L"dProduitSousSeuil_p5";
+			this->dProduitSousSeuil_p5->Size = System::Drawing::Size(145, 13);
+			this->dProduitSousSeuil_p5->TabIndex = 63;
+			this->dProduitSousSeuil_p5->Text = L"Montant total achat par client";
+			// 
+			// label84
+			// 
+			this->label84->AutoSize = true;
+			this->label84->Location = System::Drawing::Point(592, 107);
+			this->label84->Name = L"label84";
+			this->label84->Size = System::Drawing::Size(87, 13);
+			this->label84->TabIndex = 62;
+			this->label84->Text = L"Panier Moyen (€)";
+			// 
+			// dPanierMoyen_p5
+			// 
+			this->dPanierMoyen_p5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dPanierMoyen_p5->Location = System::Drawing::Point(778, 124);
+			this->dPanierMoyen_p5->Name = L"dPanierMoyen_p5";
+			this->dPanierMoyen_p5->Size = System::Drawing::Size(185, 35);
+			this->dPanierMoyen_p5->TabIndex = 61;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(542, 216);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->Size = System::Drawing::Size(421, 127);
+			this->dataGridView2->TabIndex = 60;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1044, 562);
-			this->Controls->Add(this->panelStatistiques);
 			this->Controls->Add(this->panelClient);
 			this->Controls->Add(this->panelCommande);
 			this->Controls->Add(this->panelMenu);
+			this->Controls->Add(this->panelStatistiques);
 			this->Controls->Add(this->panelStock);
 			this->Controls->Add(this->panelEmploye);
 			this->Name = L"MyForm";
@@ -1998,6 +2277,16 @@ private: System::Windows::Forms::Panel^ panelStatistiques;
 			this->panelStock->ResumeLayout(false);
 			this->panelStock->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dArticle_p4))->EndInit();
+			this->panelStatistiques->ResumeLayout(false);
+			this->panelStatistiques->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dChiffreAffaireMois))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dPanierMoyen_p5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2031,6 +2320,12 @@ private: System::Void buttonStock_Click(System::Object^ sender, System::EventArg
 	this->panelMenu->Hide();
 	this->panelStock->Show();
 }
+
+private: System::Void buttonStatistiques_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->panelMenu->Hide();
+	this->panelStatistiques->Show();
+}
+
 private: System::Void bRetour_p1_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panelEmploye->Hide();
 	this->panelMenu->Show();
@@ -2052,6 +2347,11 @@ private: System::Void bRetour_p4_Click(System::Object^ sender, System::EventArgs
 	this->panelMenu->Show();
 }
 
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->panelStatistiques->Hide();
+	this->panelMenu->Show();
+}
 };
 }
 
