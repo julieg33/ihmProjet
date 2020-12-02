@@ -2475,7 +2475,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Controls->Add(this->panelStock);
 			this->Controls->Add(this->panelEmploye);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Logiciel de gestion";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panelMenu->ResumeLayout(false);
 			this->panelMenu->PerformLayout();
