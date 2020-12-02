@@ -145,7 +145,7 @@ private: System::Windows::Forms::Button^ bRetour_p1;
 private: System::Windows::Forms::Button^ bRetour_p2;
 private: System::Windows::Forms::Panel^ panelCommande;
 private: System::Windows::Forms::Label^ label28;
-private: System::Windows::Forms::RichTextBox^ tBoxReponse_p1;
+private: System::Windows::Forms::RichTextBox^ tBoxMessage_p1;
 private: System::Windows::Forms::Label^ label29;
 private: System::Windows::Forms::RichTextBox^ tBoxMessage_p2;
 private: System::Windows::Forms::Label^ label30;
@@ -207,24 +207,24 @@ private: System::Windows::Forms::TextBox^ tDatePaiement_p3;
 
 private: System::Windows::Forms::Label^ label49;
 private: System::Windows::Forms::Label^ label50;
-private: System::Windows::Forms::TextBox^ tTypeVoieFacturation_p3;
 
-private: System::Windows::Forms::Label^ label64;
-private: System::Windows::Forms::TextBox^ tVilleFacturation_p3;
 
-private: System::Windows::Forms::Label^ label65;
-private: System::Windows::Forms::TextBox^ tCodePostalFacturation_p3;
 
-private: System::Windows::Forms::Label^ label66;
-private: System::Windows::Forms::Label^ label67;
-private: System::Windows::Forms::TextBox^ tNomVoieFacturation_p3;
 
-private: System::Windows::Forms::Label^ label68;
-private: System::Windows::Forms::TextBox^ tComplementFacturation_p3;
 
-private: System::Windows::Forms::TextBox^ tNumVoieFacturation_p3;
 
-private: System::Windows::Forms::Label^ label69;
+
+
+
+
+
+
+
+
+
+
+
+
 private: System::Windows::Forms::TextBox^ tTypeVoieLivraison_p3;
 
 private: System::Windows::Forms::Label^ label63;
@@ -349,6 +349,18 @@ private: System::Windows::Forms::ComboBox^ cbTVA_p6;
 
 
 private: System::Windows::Forms::Label^ label80;
+private: System::Windows::Forms::TextBox^ tTypeVoieFacturation_p3;
+private: System::Windows::Forms::Label^ label64;
+private: System::Windows::Forms::TextBox^ tVilleFacturation_p3;
+private: System::Windows::Forms::Label^ label65;
+private: System::Windows::Forms::TextBox^ tCodePostalFacturation_p3;
+private: System::Windows::Forms::Label^ label66;
+private: System::Windows::Forms::Label^ label67;
+private: System::Windows::Forms::TextBox^ tNomVoieFacturation_p3;
+private: System::Windows::Forms::Label^ label68;
+private: System::Windows::Forms::TextBox^ tComplementFacturation_p3;
+private: System::Windows::Forms::TextBox^ tNumVoieFacturation_p3;
+private: System::Windows::Forms::Label^ label69;
 
 private: System::ComponentModel::IContainer^ components;
 
@@ -458,7 +470,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->tIDemploye_p1 = (gcnew System::Windows::Forms::TextBox());
 			this->label74 = (gcnew System::Windows::Forms::Label());
 			this->label28 = (gcnew System::Windows::Forms::Label());
-			this->tBoxReponse_p1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->tBoxMessage_p1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->bRetour_p1 = (gcnew System::Windows::Forms::Button());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->tTypeVoie_p1 = (gcnew System::Windows::Forms::TextBox());
@@ -619,10 +631,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(147, 350);
+			this->label2->Location = System::Drawing::Point(150, 332);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(259, 20);
-			this->label2->TabIndex = 1;
+			this->label2->TabIndex = 0;
 			this->label2->Text = L"Choisissez le menu auquel accéder :";
 			// 
 			// buttonEmploye
@@ -630,7 +642,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->buttonEmploye->Location = System::Drawing::Point(464, 252);
 			this->buttonEmploye->Name = L"buttonEmploye";
 			this->buttonEmploye->Size = System::Drawing::Size(109, 25);
-			this->buttonEmploye->TabIndex = 2;
+			this->buttonEmploye->TabIndex = 1;
 			this->buttonEmploye->Text = L"Employé";
 			this->buttonEmploye->UseVisualStyleBackColor = true;
 			this->buttonEmploye->Click += gcnew System::EventHandler(this, &MyForm::buttonEmploye_Click);
@@ -640,7 +652,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->buttonClient->Location = System::Drawing::Point(464, 283);
 			this->buttonClient->Name = L"buttonClient";
 			this->buttonClient->Size = System::Drawing::Size(109, 25);
-			this->buttonClient->TabIndex = 3;
+			this->buttonClient->TabIndex = 2;
 			this->buttonClient->Text = L"Client";
 			this->buttonClient->UseVisualStyleBackColor = true;
 			this->buttonClient->Click += gcnew System::EventHandler(this, &MyForm::buttonClient_Click);
@@ -650,7 +662,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->buttonCommande->Location = System::Drawing::Point(464, 314);
 			this->buttonCommande->Name = L"buttonCommande";
 			this->buttonCommande->Size = System::Drawing::Size(109, 25);
-			this->buttonCommande->TabIndex = 4;
+			this->buttonCommande->TabIndex = 3;
 			this->buttonCommande->Text = L"Commande";
 			this->buttonCommande->UseVisualStyleBackColor = true;
 			this->buttonCommande->Click += gcnew System::EventHandler(this, &MyForm::buttonCommande_Click);
@@ -660,7 +672,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->buttonStock->Location = System::Drawing::Point(464, 345);
 			this->buttonStock->Name = L"buttonStock";
 			this->buttonStock->Size = System::Drawing::Size(109, 25);
-			this->buttonStock->TabIndex = 5;
+			this->buttonStock->TabIndex = 4;
 			this->buttonStock->Text = L"Stock";
 			this->buttonStock->UseVisualStyleBackColor = true;
 			this->buttonStock->Click += gcnew System::EventHandler(this, &MyForm::buttonStock_Click);
@@ -670,7 +682,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->buttonStatistiques->Location = System::Drawing::Point(464, 376);
 			this->buttonStatistiques->Name = L"buttonStatistiques";
 			this->buttonStatistiques->Size = System::Drawing::Size(109, 25);
-			this->buttonStatistiques->TabIndex = 6;
+			this->buttonStatistiques->TabIndex = 5;
 			this->buttonStatistiques->Text = L"Statistiques";
 			this->buttonStatistiques->UseVisualStyleBackColor = true;
 			this->buttonStatistiques->Click += gcnew System::EventHandler(this, &MyForm::buttonStatistiques_Click);
@@ -680,7 +692,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->buttonSimulation->Location = System::Drawing::Point(464, 407);
 			this->buttonSimulation->Name = L"buttonSimulation";
 			this->buttonSimulation->Size = System::Drawing::Size(109, 25);
-			this->buttonSimulation->TabIndex = 7;
+			this->buttonSimulation->TabIndex = 6;
 			this->buttonSimulation->Text = L"Simulation";
 			this->buttonSimulation->UseVisualStyleBackColor = true;
 			this->buttonSimulation->Click += gcnew System::EventHandler(this, &MyForm::buttonSimulation_Click);
@@ -695,9 +707,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelMenu->Controls->Add(this->buttonClient);
 			this->panelMenu->Controls->Add(this->buttonEmploye);
 			this->panelMenu->Controls->Add(this->label2);
-			this->panelMenu->Location = System::Drawing::Point(4, 1);
+			this->panelMenu->Location = System::Drawing::Point(0, 1);
 			this->panelMenu->Name = L"panelMenu";
-			this->panelMenu->Size = System::Drawing::Size(1025, 547);
+			this->panelMenu->Size = System::Drawing::Size(1042, 559);
 			this->panelMenu->TabIndex = 8;
 			// 
 			// panelCommande
@@ -763,22 +775,22 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelCommande->Controls->Add(this->label43);
 			this->panelCommande->Controls->Add(this->dCommande);
 			this->panelCommande->Controls->Add(this->dDetailCommande_p3);
-			this->panelCommande->Location = System::Drawing::Point(2, 1);
+			this->panelCommande->Location = System::Drawing::Point(0, 1);
 			this->panelCommande->Name = L"panelCommande";
-			this->panelCommande->Size = System::Drawing::Size(1049, 599);
+			this->panelCommande->Size = System::Drawing::Size(1042, 559);
 			this->panelCommande->TabIndex = 11;
 			// 
 			// tTypeVoieFacturation_p3
 			// 
-			this->tTypeVoieFacturation_p3->Location = System::Drawing::Point(141, 320);
+			this->tTypeVoieFacturation_p3->Location = System::Drawing::Point(170, 327);
 			this->tTypeVoieFacturation_p3->Name = L"tTypeVoieFacturation_p3";
 			this->tTypeVoieFacturation_p3->Size = System::Drawing::Size(62, 20);
-			this->tTypeVoieFacturation_p3->TabIndex = 144;
+			this->tTypeVoieFacturation_p3->TabIndex = 15;
 			// 
 			// label64
 			// 
 			this->label64->AutoSize = true;
-			this->label64->Location = System::Drawing::Point(137, 307);
+			this->label64->Location = System::Drawing::Point(166, 314);
 			this->label64->Name = L"label64";
 			this->label64->Size = System::Drawing::Size(69, 13);
 			this->label64->TabIndex = 143;
@@ -786,15 +798,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tVilleFacturation_p3
 			// 
-			this->tVilleFacturation_p3->Location = System::Drawing::Point(395, 320);
+			this->tVilleFacturation_p3->Location = System::Drawing::Point(194, 364);
 			this->tVilleFacturation_p3->Name = L"tVilleFacturation_p3";
-			this->tVilleFacturation_p3->Size = System::Drawing::Size(62, 20);
-			this->tVilleFacturation_p3->TabIndex = 142;
+			this->tVilleFacturation_p3->Size = System::Drawing::Size(73, 20);
+			this->tVilleFacturation_p3->TabIndex = 18;
 			// 
 			// label65
 			// 
 			this->label65->AutoSize = true;
-			this->label65->Location = System::Drawing::Point(410, 307);
+			this->label65->Location = System::Drawing::Point(215, 351);
 			this->label65->Name = L"label65";
 			this->label65->Size = System::Drawing::Size(26, 13);
 			this->label65->TabIndex = 141;
@@ -802,15 +814,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tCodePostalFacturation_p3
 			// 
-			this->tCodePostalFacturation_p3->Location = System::Drawing::Point(327, 320);
+			this->tCodePostalFacturation_p3->Location = System::Drawing::Point(126, 364);
 			this->tCodePostalFacturation_p3->Name = L"tCodePostalFacturation_p3";
 			this->tCodePostalFacturation_p3->Size = System::Drawing::Size(62, 20);
-			this->tCodePostalFacturation_p3->TabIndex = 140;
+			this->tCodePostalFacturation_p3->TabIndex = 17;
 			// 
 			// label66
 			// 
 			this->label66->AutoSize = true;
-			this->label66->Location = System::Drawing::Point(327, 307);
+			this->label66->Location = System::Drawing::Point(126, 351);
 			this->label66->Name = L"label66";
 			this->label66->Size = System::Drawing::Size(63, 13);
 			this->label66->TabIndex = 139;
@@ -819,7 +831,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label67
 			// 
 			this->label67->AutoSize = true;
-			this->label67->Location = System::Drawing::Point(26, 307);
+			this->label67->Location = System::Drawing::Point(55, 314);
 			this->label67->Name = L"label67";
 			this->label67->Size = System::Drawing::Size(42, 13);
 			this->label67->TabIndex = 138;
@@ -827,15 +839,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tNomVoieFacturation_p3
 			// 
-			this->tNomVoieFacturation_p3->Location = System::Drawing::Point(210, 320);
+			this->tNomVoieFacturation_p3->Location = System::Drawing::Point(239, 327);
 			this->tNomVoieFacturation_p3->Name = L"tNomVoieFacturation_p3";
 			this->tNomVoieFacturation_p3->Size = System::Drawing::Size(110, 20);
-			this->tNomVoieFacturation_p3->TabIndex = 137;
+			this->tNomVoieFacturation_p3->TabIndex = 16;
 			// 
 			// label68
 			// 
 			this->label68->AutoSize = true;
-			this->label68->Location = System::Drawing::Point(231, 307);
+			this->label68->Location = System::Drawing::Point(260, 314);
 			this->label68->Name = L"label68";
 			this->label68->Size = System::Drawing::Size(67, 13);
 			this->label68->TabIndex = 136;
@@ -843,22 +855,22 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tComplementFacturation_p3
 			// 
-			this->tComplementFacturation_p3->Location = System::Drawing::Point(73, 320);
+			this->tComplementFacturation_p3->Location = System::Drawing::Point(102, 327);
 			this->tComplementFacturation_p3->Name = L"tComplementFacturation_p3";
 			this->tComplementFacturation_p3->Size = System::Drawing::Size(62, 20);
-			this->tComplementFacturation_p3->TabIndex = 135;
+			this->tComplementFacturation_p3->TabIndex = 14;
 			// 
 			// tNumVoieFacturation_p3
 			// 
-			this->tNumVoieFacturation_p3->Location = System::Drawing::Point(27, 320);
+			this->tNumVoieFacturation_p3->Location = System::Drawing::Point(56, 327);
 			this->tNumVoieFacturation_p3->Name = L"tNumVoieFacturation_p3";
 			this->tNumVoieFacturation_p3->Size = System::Drawing::Size(39, 20);
-			this->tNumVoieFacturation_p3->TabIndex = 134;
+			this->tNumVoieFacturation_p3->TabIndex = 13;
 			// 
 			// label69
 			// 
 			this->label69->AutoSize = true;
-			this->label69->Location = System::Drawing::Point(73, 307);
+			this->label69->Location = System::Drawing::Point(102, 314);
 			this->label69->Name = L"label69";
 			this->label69->Size = System::Drawing::Size(65, 13);
 			this->label69->TabIndex = 133;
@@ -866,15 +878,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tTypeVoieLivraison_p3
 			// 
-			this->tTypeVoieLivraison_p3->Location = System::Drawing::Point(141, 257);
+			this->tTypeVoieLivraison_p3->Location = System::Drawing::Point(170, 227);
 			this->tTypeVoieLivraison_p3->Name = L"tTypeVoieLivraison_p3";
 			this->tTypeVoieLivraison_p3->Size = System::Drawing::Size(62, 20);
-			this->tTypeVoieLivraison_p3->TabIndex = 132;
+			this->tTypeVoieLivraison_p3->TabIndex = 9;
 			// 
 			// label63
 			// 
 			this->label63->AutoSize = true;
-			this->label63->Location = System::Drawing::Point(137, 244);
+			this->label63->Location = System::Drawing::Point(166, 214);
 			this->label63->Name = L"label63";
 			this->label63->Size = System::Drawing::Size(69, 13);
 			this->label63->TabIndex = 131;
@@ -883,7 +895,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label59
 			// 
 			this->label59->AutoSize = true;
-			this->label59->Location = System::Drawing::Point(6, 290);
+			this->label59->Location = System::Drawing::Point(19, 295);
 			this->label59->Name = L"label59";
 			this->label59->Size = System::Drawing::Size(157, 13);
 			this->label59->TabIndex = 126;
@@ -891,15 +903,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tVilleLivraison_p3
 			// 
-			this->tVilleLivraison_p3->Location = System::Drawing::Point(395, 257);
+			this->tVilleLivraison_p3->Location = System::Drawing::Point(194, 262);
 			this->tVilleLivraison_p3->Name = L"tVilleLivraison_p3";
-			this->tVilleLivraison_p3->Size = System::Drawing::Size(62, 20);
-			this->tVilleLivraison_p3->TabIndex = 119;
+			this->tVilleLivraison_p3->Size = System::Drawing::Size(73, 20);
+			this->tVilleLivraison_p3->TabIndex = 12;
 			// 
 			// label56
 			// 
 			this->label56->AutoSize = true;
-			this->label56->Location = System::Drawing::Point(410, 244);
+			this->label56->Location = System::Drawing::Point(216, 249);
 			this->label56->Name = L"label56";
 			this->label56->Size = System::Drawing::Size(26, 13);
 			this->label56->TabIndex = 118;
@@ -907,15 +919,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tCodePostalLivraison_p3
 			// 
-			this->tCodePostalLivraison_p3->Location = System::Drawing::Point(327, 257);
+			this->tCodePostalLivraison_p3->Location = System::Drawing::Point(126, 262);
 			this->tCodePostalLivraison_p3->Name = L"tCodePostalLivraison_p3";
 			this->tCodePostalLivraison_p3->Size = System::Drawing::Size(62, 20);
-			this->tCodePostalLivraison_p3->TabIndex = 117;
+			this->tCodePostalLivraison_p3->TabIndex = 11;
 			// 
 			// label55
 			// 
 			this->label55->AutoSize = true;
-			this->label55->Location = System::Drawing::Point(327, 244);
+			this->label55->Location = System::Drawing::Point(126, 249);
 			this->label55->Name = L"label55";
 			this->label55->Size = System::Drawing::Size(63, 13);
 			this->label55->TabIndex = 116;
@@ -924,7 +936,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label33
 			// 
 			this->label33->AutoSize = true;
-			this->label33->Location = System::Drawing::Point(6, 225);
+			this->label33->Location = System::Drawing::Point(23, 193);
 			this->label33->Name = L"label33";
 			this->label33->Size = System::Drawing::Size(145, 13);
 			this->label33->TabIndex = 115;
@@ -933,7 +945,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label51
 			// 
 			this->label51->AutoSize = true;
-			this->label51->Location = System::Drawing::Point(26, 244);
+			this->label51->Location = System::Drawing::Point(55, 214);
 			this->label51->Name = L"label51";
 			this->label51->Size = System::Drawing::Size(42, 13);
 			this->label51->TabIndex = 111;
@@ -941,22 +953,22 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tNomVoieLivraison_p3
 			// 
-			this->tNomVoieLivraison_p3->Location = System::Drawing::Point(210, 257);
+			this->tNomVoieLivraison_p3->Location = System::Drawing::Point(239, 227);
 			this->tNomVoieLivraison_p3->Name = L"tNomVoieLivraison_p3";
 			this->tNomVoieLivraison_p3->Size = System::Drawing::Size(110, 20);
-			this->tNomVoieLivraison_p3->TabIndex = 109;
+			this->tNomVoieLivraison_p3->TabIndex = 10;
 			// 
 			// tDateLivraison_p3
 			// 
-			this->tDateLivraison_p3->Location = System::Drawing::Point(254, 185);
+			this->tDateLivraison_p3->Location = System::Drawing::Point(226, 154);
 			this->tDateLivraison_p3->Name = L"tDateLivraison_p3";
 			this->tDateLivraison_p3->Size = System::Drawing::Size(110, 20);
-			this->tDateLivraison_p3->TabIndex = 108;
+			this->tDateLivraison_p3->TabIndex = 6;
 			// 
 			// label54
 			// 
 			this->label54->AutoSize = true;
-			this->label54->Location = System::Drawing::Point(231, 244);
+			this->label54->Location = System::Drawing::Point(260, 214);
 			this->label54->Name = L"label54";
 			this->label54->Size = System::Drawing::Size(67, 13);
 			this->label54->TabIndex = 105;
@@ -967,14 +979,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->tMoyenPaiement_p3->Location = System::Drawing::Point(254, 454);
 			this->tMoyenPaiement_p3->Name = L"tMoyenPaiement_p3";
 			this->tMoyenPaiement_p3->Size = System::Drawing::Size(110, 20);
-			this->tMoyenPaiement_p3->TabIndex = 102;
+			this->tMoyenPaiement_p3->TabIndex = 22;
 			// 
 			// tDatePaiement_p3
 			// 
-			this->tDatePaiement_p3->Location = System::Drawing::Point(119, 454);
+			this->tDatePaiement_p3->Location = System::Drawing::Point(129, 454);
 			this->tDatePaiement_p3->Name = L"tDatePaiement_p3";
 			this->tDatePaiement_p3->Size = System::Drawing::Size(110, 20);
-			this->tDatePaiement_p3->TabIndex = 101;
+			this->tDatePaiement_p3->TabIndex = 21;
 			// 
 			// label49
 			// 
@@ -988,7 +1000,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label50
 			// 
 			this->label50->AutoSize = true;
-			this->label50->Location = System::Drawing::Point(117, 440);
+			this->label50->Location = System::Drawing::Point(126, 438);
 			this->label50->Name = L"label50";
 			this->label50->Size = System::Drawing::Size(91, 13);
 			this->label50->TabIndex = 99;
@@ -997,7 +1009,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label48
 			// 
 			this->label48->AutoSize = true;
-			this->label48->Location = System::Drawing::Point(68, 355);
+			this->label48->Location = System::Drawing::Point(13, 417);
 			this->label48->Name = L"label48";
 			this->label48->Size = System::Drawing::Size(95, 13);
 			this->label48->TabIndex = 98;
@@ -1006,7 +1018,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label47
 			// 
 			this->label47->AutoSize = true;
-			this->label47->Location = System::Drawing::Point(67, 420);
+			this->label47->Location = System::Drawing::Point(13, 457);
 			this->label47->Name = L"label47";
 			this->label47->Size = System::Drawing::Size(110, 13);
 			this->label47->TabIndex = 97;
@@ -1015,7 +1027,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label46
 			// 
 			this->label46->AutoSize = true;
-			this->label46->Location = System::Drawing::Point(70, 115);
+			this->label46->Location = System::Drawing::Point(23, 86);
 			this->label46->Name = L"label46";
 			this->label46->Size = System::Drawing::Size(119, 13);
 			this->label46->TabIndex = 96;
@@ -1024,7 +1036,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label45
 			// 
 			this->label45->AutoSize = true;
-			this->label45->Location = System::Drawing::Point(120, 171);
+			this->label45->Location = System::Drawing::Point(64, 140);
 			this->label45->Name = L"label45";
 			this->label45->Size = System::Drawing::Size(93, 13);
 			this->label45->TabIndex = 94;
@@ -1033,7 +1045,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label44
 			// 
 			this->label44->AutoSize = true;
-			this->label44->Location = System::Drawing::Point(471, 348);
+			this->label44->Location = System::Drawing::Point(412, 336);
 			this->label44->Name = L"label44";
 			this->label44->Size = System::Drawing::Size(86, 13);
 			this->label44->TabIndex = 93;
@@ -1042,15 +1054,15 @@ private: System::ComponentModel::IContainer^ components;
 			// dDetailPaiement_p3
 			// 
 			this->dDetailPaiement_p3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dDetailPaiement_p3->Location = System::Drawing::Point(474, 364);
+			this->dDetailPaiement_p3->Location = System::Drawing::Point(412, 351);
 			this->dDetailPaiement_p3->Name = L"dDetailPaiement_p3";
-			this->dDetailPaiement_p3->Size = System::Drawing::Size(560, 124);
-			this->dDetailPaiement_p3->TabIndex = 92;
+			this->dDetailPaiement_p3->Size = System::Drawing::Size(622, 134);
+			this->dDetailPaiement_p3->TabIndex = 0;
 			// 
 			// label30
 			// 
 			this->label30->AutoSize = true;
-			this->label30->Location = System::Drawing::Point(473, 500);
+			this->label30->Location = System::Drawing::Point(418, 493);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(50, 13);
 			this->label30->TabIndex = 91;
@@ -1058,9 +1070,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tBoxMessage_p3
 			// 
-			this->tBoxMessage_p3->Location = System::Drawing::Point(474, 506);
+			this->tBoxMessage_p3->Location = System::Drawing::Point(411, 506);
 			this->tBoxMessage_p3->Name = L"tBoxMessage_p3";
-			this->tBoxMessage_p3->Size = System::Drawing::Size(560, 53);
+			this->tBoxMessage_p3->ReadOnly = true;
+			this->tBoxMessage_p3->Size = System::Drawing::Size(624, 38);
 			this->tBoxMessage_p3->TabIndex = 90;
 			this->tBoxMessage_p3->Text = L"";
 			// 
@@ -1069,24 +1082,24 @@ private: System::ComponentModel::IContainer^ components;
 			this->bRetour_p3->Location = System::Drawing::Point(4, 3);
 			this->bRetour_p3->Name = L"bRetour_p3";
 			this->bRetour_p3->Size = System::Drawing::Size(37, 23);
-			this->bRetour_p3->TabIndex = 89;
+			this->bRetour_p3->TabIndex = 26;
 			this->bRetour_p3->Text = L"<<";
 			this->bRetour_p3->UseVisualStyleBackColor = true;
 			this->bRetour_p3->Click += gcnew System::EventHandler(this, &MyForm::bRetour_p3_Click);
 			// 
 			// bRechercherCommande_p3
 			// 
-			this->bRechercherCommande_p3->Location = System::Drawing::Point(204, 92);
+			this->bRechercherCommande_p3->Location = System::Drawing::Point(278, 43);
 			this->bRechercherCommande_p3->Name = L"bRechercherCommande_p3";
 			this->bRechercherCommande_p3->Size = System::Drawing::Size(76, 20);
-			this->bRechercherCommande_p3->TabIndex = 88;
+			this->bRechercherCommande_p3->TabIndex = 2;
 			this->bRechercherCommande_p3->Text = L"Rechercher";
 			this->bRechercherCommande_p3->UseVisualStyleBackColor = true;
 			// 
 			// label31
 			// 
 			this->label31->AutoSize = true;
-			this->label31->Location = System::Drawing::Point(187, 50);
+			this->label31->Location = System::Drawing::Point(23, 46);
 			this->label31->Name = L"label31";
 			this->label31->Size = System::Drawing::Size(112, 13);
 			this->label31->TabIndex = 87;
@@ -1094,22 +1107,22 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tRechercheCommande_p3
 			// 
-			this->tRechercheCommande_p3->Location = System::Drawing::Point(188, 66);
+			this->tRechercheCommande_p3->Location = System::Drawing::Point(146, 43);
 			this->tRechercheCommande_p3->Name = L"tRechercheCommande_p3";
 			this->tRechercheCommande_p3->Size = System::Drawing::Size(110, 20);
-			this->tRechercheCommande_p3->TabIndex = 86;
+			this->tRechercheCommande_p3->TabIndex = 1;
 			// 
 			// tDernierSolde_p3
 			// 
-			this->tDernierSolde_p3->Location = System::Drawing::Point(121, 185);
+			this->tDernierSolde_p3->Location = System::Drawing::Point(65, 154);
 			this->tDernierSolde_p3->Name = L"tDernierSolde_p3";
 			this->tDernierSolde_p3->Size = System::Drawing::Size(111, 20);
-			this->tDernierSolde_p3->TabIndex = 85;
+			this->tDernierSolde_p3->TabIndex = 5;
 			// 
 			// label32
 			// 
 			this->label32->AutoSize = true;
-			this->label32->Location = System::Drawing::Point(252, 171);
+			this->label32->Location = System::Drawing::Point(224, 140);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(86, 13);
 			this->label32->TabIndex = 84;
@@ -1117,77 +1130,77 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// bAjouter_p3
 			// 
-			this->bAjouter_p3->Location = System::Drawing::Point(250, 486);
+			this->bAjouter_p3->Location = System::Drawing::Point(200, 486);
 			this->bAjouter_p3->Name = L"bAjouter_p3";
 			this->bAjouter_p3->Size = System::Drawing::Size(66, 68);
-			this->bAjouter_p3->TabIndex = 81;
+			this->bAjouter_p3->TabIndex = 23;
 			this->bAjouter_p3->Text = L"Ajouter";
 			this->bAjouter_p3->UseVisualStyleBackColor = true;
 			// 
 			// bMaj_p3
 			// 
-			this->bMaj_p3->Location = System::Drawing::Point(170, 486);
+			this->bMaj_p3->Location = System::Drawing::Point(120, 486);
 			this->bMaj_p3->Name = L"bMaj_p3";
 			this->bMaj_p3->Size = System::Drawing::Size(75, 32);
-			this->bMaj_p3->TabIndex = 80;
+			this->bMaj_p3->TabIndex = 24;
 			this->bMaj_p3->Text = L"Mise à jour";
 			this->bMaj_p3->UseVisualStyleBackColor = true;
 			// 
 			// bSupprimer_p3
 			// 
-			this->bSupprimer_p3->Location = System::Drawing::Point(170, 522);
+			this->bSupprimer_p3->Location = System::Drawing::Point(120, 522);
 			this->bSupprimer_p3->Name = L"bSupprimer_p3";
 			this->bSupprimer_p3->Size = System::Drawing::Size(75, 32);
-			this->bSupprimer_p3->TabIndex = 79;
+			this->bSupprimer_p3->TabIndex = 25;
 			this->bSupprimer_p3->Text = L"Supprimer";
 			this->bSupprimer_p3->UseVisualStyleBackColor = true;
 			// 
 			// tQuantiteArticle_p3
 			// 
-			this->tQuantiteArticle_p3->Location = System::Drawing::Point(255, 388);
+			this->tQuantiteArticle_p3->Location = System::Drawing::Point(255, 414);
 			this->tQuantiteArticle_p3->Name = L"tQuantiteArticle_p3";
 			this->tQuantiteArticle_p3->Size = System::Drawing::Size(110, 20);
-			this->tQuantiteArticle_p3->TabIndex = 78;
+			this->tQuantiteArticle_p3->TabIndex = 20;
 			// 
 			// tRefArticle_p3
 			// 
-			this->tRefArticle_p3->Location = System::Drawing::Point(121, 388);
+			this->tRefArticle_p3->Location = System::Drawing::Point(129, 417);
 			this->tRefArticle_p3->Name = L"tRefArticle_p3";
 			this->tRefArticle_p3->Size = System::Drawing::Size(110, 20);
-			this->tRefArticle_p3->TabIndex = 77;
+			this->tRefArticle_p3->TabIndex = 19;
 			// 
 			// tComplementLivraison_p3
 			// 
-			this->tComplementLivraison_p3->Location = System::Drawing::Point(73, 257);
+			this->tComplementLivraison_p3->Location = System::Drawing::Point(102, 227);
 			this->tComplementLivraison_p3->Name = L"tComplementLivraison_p3";
 			this->tComplementLivraison_p3->Size = System::Drawing::Size(62, 20);
-			this->tComplementLivraison_p3->TabIndex = 75;
+			this->tComplementLivraison_p3->TabIndex = 8;
 			// 
 			// tNumVoieLivraison_p3
 			// 
-			this->tNumVoieLivraison_p3->Location = System::Drawing::Point(27, 257);
+			this->tNumVoieLivraison_p3->Location = System::Drawing::Point(58, 227);
 			this->tNumVoieLivraison_p3->Name = L"tNumVoieLivraison_p3";
 			this->tNumVoieLivraison_p3->Size = System::Drawing::Size(39, 20);
-			this->tNumVoieLivraison_p3->TabIndex = 74;
+			this->tNumVoieLivraison_p3->TabIndex = 7;
 			// 
 			// tPrenom_p3
 			// 
-			this->tPrenom_p3->Location = System::Drawing::Point(254, 145);
+			this->tPrenom_p3->Location = System::Drawing::Point(226, 113);
 			this->tPrenom_p3->Name = L"tPrenom_p3";
 			this->tPrenom_p3->Size = System::Drawing::Size(110, 20);
-			this->tPrenom_p3->TabIndex = 73;
+			this->tPrenom_p3->TabIndex = 4;
 			// 
 			// tNom_p3
 			// 
-			this->tNom_p3->Location = System::Drawing::Point(123, 145);
+			this->tNom_p3->Location = System::Drawing::Point(65, 113);
 			this->tNom_p3->Name = L"tNom_p3";
 			this->tNom_p3->Size = System::Drawing::Size(110, 20);
-			this->tNom_p3->TabIndex = 72;
+			this->tNom_p3->TabIndex = 3;
 			// 
 			// label34
 			// 
 			this->label34->AutoSize = true;
-			this->label34->Location = System::Drawing::Point(255, 375);
+			this->label34->Location = System::Drawing::Point(255, 401);
 			this->label34->Name = L"label34";
 			this->label34->Size = System::Drawing::Size(47, 13);
 			this->label34->TabIndex = 71;
@@ -1196,7 +1209,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label35
 			// 
 			this->label35->AutoSize = true;
-			this->label35->Location = System::Drawing::Point(118, 375);
+			this->label35->Location = System::Drawing::Point(128, 401);
 			this->label35->Name = L"label35";
 			this->label35->Size = System::Drawing::Size(57, 13);
 			this->label35->TabIndex = 70;
@@ -1205,7 +1218,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label37
 			// 
 			this->label37->AutoSize = true;
-			this->label37->Location = System::Drawing::Point(73, 244);
+			this->label37->Location = System::Drawing::Point(102, 214);
 			this->label37->Name = L"label37";
 			this->label37->Size = System::Drawing::Size(65, 13);
 			this->label37->TabIndex = 68;
@@ -1214,7 +1227,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label39
 			// 
 			this->label39->AutoSize = true;
-			this->label39->Location = System::Drawing::Point(252, 132);
+			this->label39->Location = System::Drawing::Point(224, 100);
 			this->label39->Name = L"label39";
 			this->label39->Size = System::Drawing::Size(43, 13);
 			this->label39->TabIndex = 66;
@@ -1223,7 +1236,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label40
 			// 
 			this->label40->AutoSize = true;
-			this->label40->Location = System::Drawing::Point(122, 132);
+			this->label40->Location = System::Drawing::Point(64, 100);
 			this->label40->Name = L"label40";
 			this->label40->Size = System::Drawing::Size(29, 13);
 			this->label40->TabIndex = 65;
@@ -1234,7 +1247,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label41->AutoSize = true;
 			this->label41->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label41->Location = System::Drawing::Point(177, 22);
+			this->label41->Location = System::Drawing::Point(46, 5);
 			this->label41->Name = L"label41";
 			this->label41->Size = System::Drawing::Size(135, 20);
 			this->label41->TabIndex = 64;
@@ -1243,7 +1256,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label42
 			// 
 			this->label42->AutoSize = true;
-			this->label42->Location = System::Drawing::Point(471, 197);
+			this->label42->Location = System::Drawing::Point(413, 183);
 			this->label42->Name = L"label42";
 			this->label42->Size = System::Drawing::Size(95, 13);
 			this->label42->TabIndex = 63;
@@ -1252,7 +1265,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label43
 			// 
 			this->label43->AutoSize = true;
-			this->label43->Location = System::Drawing::Point(471, 32);
+			this->label43->Location = System::Drawing::Point(413, 30);
 			this->label43->Name = L"label43";
 			this->label43->Size = System::Drawing::Size(60, 13);
 			this->label43->TabIndex = 62;
@@ -1261,18 +1274,18 @@ private: System::ComponentModel::IContainer^ components;
 			// dCommande
 			// 
 			this->dCommande->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dCommande->Location = System::Drawing::Point(474, 46);
+			this->dCommande->Location = System::Drawing::Point(413, 199);
 			this->dCommande->Name = L"dCommande";
-			this->dCommande->Size = System::Drawing::Size(561, 134);
-			this->dCommande->TabIndex = 61;
+			this->dCommande->Size = System::Drawing::Size(622, 134);
+			this->dCommande->TabIndex = 0;
 			// 
 			// dDetailCommande_p3
 			// 
 			this->dDetailCommande_p3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dDetailCommande_p3->Location = System::Drawing::Point(474, 210);
+			this->dDetailCommande_p3->Location = System::Drawing::Point(413, 46);
 			this->dDetailCommande_p3->Name = L"dDetailCommande_p3";
-			this->dDetailCommande_p3->Size = System::Drawing::Size(561, 123);
-			this->dDetailCommande_p3->TabIndex = 60;
+			this->dDetailCommande_p3->Size = System::Drawing::Size(619, 134);
+			this->dDetailCommande_p3->TabIndex = 0;
 			// 
 			// panelEmploye
 			// 
@@ -1280,7 +1293,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelEmploye->Controls->Add(this->tIDemploye_p1);
 			this->panelEmploye->Controls->Add(this->label74);
 			this->panelEmploye->Controls->Add(this->label28);
-			this->panelEmploye->Controls->Add(this->tBoxReponse_p1);
+			this->panelEmploye->Controls->Add(this->tBoxMessage_p1);
 			this->panelEmploye->Controls->Add(this->bRetour_p1);
 			this->panelEmploye->Controls->Add(this->label9);
 			this->panelEmploye->Controls->Add(this->tTypeVoie_p1);
@@ -1308,31 +1321,31 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelEmploye->Controls->Add(this->label4);
 			this->panelEmploye->Controls->Add(this->dEmploye_p1);
 			this->panelEmploye->Controls->Add(this->labelEmploye);
-			this->panelEmploye->Location = System::Drawing::Point(3, 3);
+			this->panelEmploye->Location = System::Drawing::Point(0, 1);
 			this->panelEmploye->Name = L"panelEmploye";
-			this->panelEmploye->Size = System::Drawing::Size(1037, 541);
+			this->panelEmploye->Size = System::Drawing::Size(1042, 559);
 			this->panelEmploye->TabIndex = 9;
 			// 
 			// bRechercheIDemploye_p1
 			// 
-			this->bRechercheIDemploye_p1->Location = System::Drawing::Point(111, 74);
+			this->bRechercheIDemploye_p1->Location = System::Drawing::Point(150, 92);
 			this->bRechercheIDemploye_p1->Name = L"bRechercheIDemploye_p1";
 			this->bRechercheIDemploye_p1->Size = System::Drawing::Size(87, 19);
-			this->bRechercheIDemploye_p1->TabIndex = 63;
+			this->bRechercheIDemploye_p1->TabIndex = 2;
 			this->bRechercheIDemploye_p1->Text = L"Rechercher";
 			this->bRechercheIDemploye_p1->UseVisualStyleBackColor = true;
 			// 
 			// tIDemploye_p1
 			// 
-			this->tIDemploye_p1->Location = System::Drawing::Point(97, 49);
+			this->tIDemploye_p1->Location = System::Drawing::Point(136, 67);
 			this->tIDemploye_p1->Name = L"tIDemploye_p1";
 			this->tIDemploye_p1->Size = System::Drawing::Size(110, 20);
-			this->tIDemploye_p1->TabIndex = 62;
+			this->tIDemploye_p1->TabIndex = 1;
 			// 
 			// label74
 			// 
 			this->label74->AutoSize = true;
-			this->label74->Location = System::Drawing::Point(120, 33);
+			this->label74->Location = System::Drawing::Point(159, 51);
 			this->label74->Name = L"label74";
 			this->label74->Size = System::Drawing::Size(60, 13);
 			this->label74->TabIndex = 61;
@@ -1341,26 +1354,27 @@ private: System::ComponentModel::IContainer^ components;
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(341, 461);
+			this->label28->Location = System::Drawing::Point(418, 493);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(50, 13);
 			this->label28->TabIndex = 60;
 			this->label28->Text = L"Message";
 			// 
-			// tBoxReponse_p1
+			// tBoxMessage_p1
 			// 
-			this->tBoxReponse_p1->Location = System::Drawing::Point(336, 469);
-			this->tBoxReponse_p1->Name = L"tBoxReponse_p1";
-			this->tBoxReponse_p1->Size = System::Drawing::Size(685, 64);
-			this->tBoxReponse_p1->TabIndex = 59;
-			this->tBoxReponse_p1->Text = L"";
+			this->tBoxMessage_p1->Location = System::Drawing::Point(411, 506);
+			this->tBoxMessage_p1->Name = L"tBoxMessage_p1";
+			this->tBoxMessage_p1->ReadOnly = true;
+			this->tBoxMessage_p1->Size = System::Drawing::Size(624, 38);
+			this->tBoxMessage_p1->TabIndex = 59;
+			this->tBoxMessage_p1->Text = L"";
 			// 
 			// bRetour_p1
 			// 
-			this->bRetour_p1->Location = System::Drawing::Point(1, 1);
+			this->bRetour_p1->Location = System::Drawing::Point(4, 3);
 			this->bRetour_p1->Name = L"bRetour_p1";
 			this->bRetour_p1->Size = System::Drawing::Size(37, 23);
-			this->bRetour_p1->TabIndex = 58;
+			this->bRetour_p1->TabIndex = 16;
 			this->bRetour_p1->Text = L"<<";
 			this->bRetour_p1->UseVisualStyleBackColor = true;
 			this->bRetour_p1->Click += gcnew System::EventHandler(this, &MyForm::bRetour_p1_Click);
@@ -1368,7 +1382,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(333, 11);
+			this->label9->Location = System::Drawing::Point(411, 38);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(47, 13);
 			this->label9->TabIndex = 27;
@@ -1376,15 +1390,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tTypeVoie_p1
 			// 
-			this->tTypeVoie_p1->Location = System::Drawing::Point(26, 311);
+			this->tTypeVoie_p1->Location = System::Drawing::Point(65, 338);
 			this->tTypeVoie_p1->Name = L"tTypeVoie_p1";
 			this->tTypeVoie_p1->Size = System::Drawing::Size(110, 20);
-			this->tTypeVoie_p1->TabIndex = 26;
+			this->tTypeVoie_p1->TabIndex = 9;
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(23, 294);
+			this->label14->Location = System::Drawing::Point(62, 321);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(69, 13);
 			this->label14->TabIndex = 25;
@@ -1392,98 +1406,98 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// bAjouter_p1
 			// 
-			this->bAjouter_p1->Location = System::Drawing::Point(167, 423);
+			this->bAjouter_p1->Location = System::Drawing::Point(206, 433);
 			this->bAjouter_p1->Name = L"bAjouter_p1";
 			this->bAjouter_p1->Size = System::Drawing::Size(66, 110);
-			this->bAjouter_p1->TabIndex = 24;
+			this->bAjouter_p1->TabIndex = 13;
 			this->bAjouter_p1->Text = L"Ajouter";
 			this->bAjouter_p1->UseVisualStyleBackColor = true;
 			// 
 			// bMaj_p1
 			// 
-			this->bMaj_p1->Location = System::Drawing::Point(82, 423);
+			this->bMaj_p1->Location = System::Drawing::Point(121, 433);
 			this->bMaj_p1->Name = L"bMaj_p1";
 			this->bMaj_p1->Size = System::Drawing::Size(75, 51);
-			this->bMaj_p1->TabIndex = 23;
+			this->bMaj_p1->TabIndex = 14;
 			this->bMaj_p1->Text = L"Mise à jour";
 			this->bMaj_p1->UseVisualStyleBackColor = true;
 			// 
 			// bSupprimer_p1
 			// 
-			this->bSupprimer_p1->Location = System::Drawing::Point(82, 480);
+			this->bSupprimer_p1->Location = System::Drawing::Point(121, 490);
 			this->bSupprimer_p1->Name = L"bSupprimer_p1";
 			this->bSupprimer_p1->Size = System::Drawing::Size(75, 53);
-			this->bSupprimer_p1->TabIndex = 22;
+			this->bSupprimer_p1->TabIndex = 15;
 			this->bSupprimer_p1->Text = L"Supprimer";
 			this->bSupprimer_p1->UseVisualStyleBackColor = true;
 			// 
 			// tVille_p1
 			// 
-			this->tVille_p1->Location = System::Drawing::Point(160, 361);
+			this->tVille_p1->Location = System::Drawing::Point(199, 388);
 			this->tVille_p1->Name = L"tVille_p1";
 			this->tVille_p1->Size = System::Drawing::Size(110, 20);
-			this->tVille_p1->TabIndex = 21;
+			this->tVille_p1->TabIndex = 12;
 			// 
 			// tCodePostal_p1
 			// 
-			this->tCodePostal_p1->Location = System::Drawing::Point(26, 361);
+			this->tCodePostal_p1->Location = System::Drawing::Point(65, 388);
 			this->tCodePostal_p1->Name = L"tCodePostal_p1";
 			this->tCodePostal_p1->Size = System::Drawing::Size(110, 20);
-			this->tCodePostal_p1->TabIndex = 20;
+			this->tCodePostal_p1->TabIndex = 11;
 			// 
 			// tNomVoie_p1
 			// 
-			this->tNomVoie_p1->Location = System::Drawing::Point(161, 311);
+			this->tNomVoie_p1->Location = System::Drawing::Point(200, 338);
 			this->tNomVoie_p1->Name = L"tNomVoie_p1";
 			this->tNomVoie_p1->Size = System::Drawing::Size(110, 20);
-			this->tNomVoie_p1->TabIndex = 19;
+			this->tNomVoie_p1->TabIndex = 10;
 			// 
 			// tCompAdresse_p1
 			// 
-			this->tCompAdresse_p1->Location = System::Drawing::Point(160, 261);
+			this->tCompAdresse_p1->Location = System::Drawing::Point(199, 288);
 			this->tCompAdresse_p1->Name = L"tCompAdresse_p1";
 			this->tCompAdresse_p1->Size = System::Drawing::Size(110, 20);
-			this->tCompAdresse_p1->TabIndex = 18;
+			this->tCompAdresse_p1->TabIndex = 8;
 			// 
 			// tNumVoie_p1
 			// 
-			this->tNumVoie_p1->Location = System::Drawing::Point(26, 261);
+			this->tNumVoie_p1->Location = System::Drawing::Point(65, 288);
 			this->tNumVoie_p1->Name = L"tNumVoie_p1";
 			this->tNumVoie_p1->Size = System::Drawing::Size(110, 20);
-			this->tNumVoie_p1->TabIndex = 17;
+			this->tNumVoie_p1->TabIndex = 7;
 			// 
 			// tPrenomSuperieur_p1
 			// 
-			this->tPrenomSuperieur_p1->Location = System::Drawing::Point(160, 174);
+			this->tPrenomSuperieur_p1->Location = System::Drawing::Point(199, 215);
 			this->tPrenomSuperieur_p1->Name = L"tPrenomSuperieur_p1";
 			this->tPrenomSuperieur_p1->Size = System::Drawing::Size(111, 20);
-			this->tPrenomSuperieur_p1->TabIndex = 15;
+			this->tPrenomSuperieur_p1->TabIndex = 6;
 			// 
 			// tNomSuperieur_p1
 			// 
-			this->tNomSuperieur_p1->Location = System::Drawing::Point(161, 122);
+			this->tNomSuperieur_p1->Location = System::Drawing::Point(65, 215);
 			this->tNomSuperieur_p1->Name = L"tNomSuperieur_p1";
 			this->tNomSuperieur_p1->Size = System::Drawing::Size(110, 20);
-			this->tNomSuperieur_p1->TabIndex = 14;
+			this->tNomSuperieur_p1->TabIndex = 5;
 			// 
 			// tPrenom_p1
 			// 
-			this->tPrenom_p1->Location = System::Drawing::Point(26, 174);
+			this->tPrenom_p1->Location = System::Drawing::Point(199, 149);
 			this->tPrenom_p1->Name = L"tPrenom_p1";
 			this->tPrenom_p1->Size = System::Drawing::Size(110, 20);
-			this->tPrenom_p1->TabIndex = 13;
+			this->tPrenom_p1->TabIndex = 4;
 			// 
 			// tNom_p1
 			// 
-			this->tNom_p1->Location = System::Drawing::Point(26, 122);
+			this->tNom_p1->Location = System::Drawing::Point(65, 149);
 			this->tNom_p1->Name = L"tNom_p1";
 			this->tNom_p1->Size = System::Drawing::Size(110, 20);
-			this->tNom_p1->TabIndex = 12;
+			this->tNom_p1->TabIndex = 3;
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(160, 345);
+			this->label13->Location = System::Drawing::Point(199, 372);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(26, 13);
 			this->label13->TabIndex = 11;
@@ -1492,7 +1506,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(23, 345);
+			this->label12->Location = System::Drawing::Point(62, 372);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(63, 13);
 			this->label12->TabIndex = 10;
@@ -1501,7 +1515,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(158, 241);
+			this->label11->Location = System::Drawing::Point(197, 268);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(113, 13);
 			this->label11->TabIndex = 9;
@@ -1510,7 +1524,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(23, 241);
+			this->label10->Location = System::Drawing::Point(62, 268);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(82, 13);
 			this->label10->TabIndex = 8;
@@ -1519,7 +1533,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(158, 294);
+			this->label8->Location = System::Drawing::Point(197, 321);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(67, 13);
 			this->label8->TabIndex = 6;
@@ -1528,7 +1542,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(158, 158);
+			this->label7->Location = System::Drawing::Point(197, 199);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(89, 13);
 			this->label7->TabIndex = 5;
@@ -1537,7 +1551,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(158, 106);
+			this->label6->Location = System::Drawing::Point(62, 199);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(75, 13);
 			this->label6->TabIndex = 4;
@@ -1546,7 +1560,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(23, 158);
+			this->label5->Location = System::Drawing::Point(196, 133);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(43, 13);
 			this->label5->TabIndex = 3;
@@ -1555,7 +1569,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(23, 106);
+			this->label4->Location = System::Drawing::Point(62, 133);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(29, 13);
 			this->label4->TabIndex = 2;
@@ -1564,17 +1578,17 @@ private: System::ComponentModel::IContainer^ components;
 			// dEmploye_p1
 			// 
 			this->dEmploye_p1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dEmploye_p1->Location = System::Drawing::Point(336, 27);
+			this->dEmploye_p1->Location = System::Drawing::Point(413, 54);
 			this->dEmploye_p1->Name = L"dEmploye_p1";
-			this->dEmploye_p1->Size = System::Drawing::Size(686, 394);
-			this->dEmploye_p1->TabIndex = 1;
+			this->dEmploye_p1->Size = System::Drawing::Size(622, 394);
+			this->dEmploye_p1->TabIndex = 0;
 			// 
 			// labelEmploye
 			// 
 			this->labelEmploye->AutoSize = true;
 			this->labelEmploye->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelEmploye->Location = System::Drawing::Point(97, 4);
+			this->labelEmploye->Location = System::Drawing::Point(46, 5);
 			this->labelEmploye->Name = L"labelEmploye";
 			this->labelEmploye->Size = System::Drawing::Size(114, 20);
 			this->labelEmploye->TabIndex = 0;
@@ -1614,15 +1628,15 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelClient->Controls->Add(this->label15);
 			this->panelClient->Controls->Add(this->dClient_p2);
 			this->panelClient->Controls->Add(this->dAdresse_p2);
-			this->panelClient->Location = System::Drawing::Point(2, 1);
+			this->panelClient->Location = System::Drawing::Point(0, 1);
 			this->panelClient->Name = L"panelClient";
-			this->panelClient->Size = System::Drawing::Size(1037, 553);
+			this->panelClient->Size = System::Drawing::Size(1042, 559);
 			this->panelClient->TabIndex = 10;
 			// 
 			// label29
 			// 
 			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(359, 473);
+			this->label29->Location = System::Drawing::Point(418, 493);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(50, 13);
 			this->label29->TabIndex = 59;
@@ -1630,74 +1644,75 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tBoxMessage_p2
 			// 
-			this->tBoxMessage_p2->Location = System::Drawing::Point(362, 488);
+			this->tBoxMessage_p2->Location = System::Drawing::Point(411, 506);
 			this->tBoxMessage_p2->Name = L"tBoxMessage_p2";
-			this->tBoxMessage_p2->Size = System::Drawing::Size(666, 55);
-			this->tBoxMessage_p2->TabIndex = 58;
+			this->tBoxMessage_p2->ReadOnly = true;
+			this->tBoxMessage_p2->Size = System::Drawing::Size(624, 38);
+			this->tBoxMessage_p2->TabIndex = 0;
 			this->tBoxMessage_p2->Text = L"";
 			// 
 			// bRetour_p2
 			// 
-			this->bRetour_p2->Location = System::Drawing::Point(4, 5);
+			this->bRetour_p2->Location = System::Drawing::Point(4, 3);
 			this->bRetour_p2->Name = L"bRetour_p2";
 			this->bRetour_p2->Size = System::Drawing::Size(37, 23);
-			this->bRetour_p2->TabIndex = 57;
+			this->bRetour_p2->TabIndex = 15;
 			this->bRetour_p2->Text = L"<<";
 			this->bRetour_p2->UseVisualStyleBackColor = true;
 			this->bRetour_p2->Click += gcnew System::EventHandler(this, &MyForm::bRetour_p2_Click);
 			// 
 			// bRechecher_p2
 			// 
-			this->bRechecher_p2->Location = System::Drawing::Point(95, 92);
+			this->bRechecher_p2->Location = System::Drawing::Point(144, 92);
 			this->bRechecher_p2->Name = L"bRechecher_p2";
 			this->bRechecher_p2->Size = System::Drawing::Size(76, 20);
-			this->bRechecher_p2->TabIndex = 56;
+			this->bRechecher_p2->TabIndex = 2;
 			this->bRechecher_p2->Text = L"Rechercher";
 			this->bRechecher_p2->UseVisualStyleBackColor = true;
 			// 
 			// label23
 			// 
 			this->label23->AutoSize = true;
-			this->label23->Location = System::Drawing::Point(102, 50);
+			this->label23->Location = System::Drawing::Point(151, 50);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(62, 13);
-			this->label23->TabIndex = 55;
+			this->label23->TabIndex = 0;
 			this->label23->Text = L"N° de client";
 			// 
 			// tNumClient_p2
 			// 
-			this->tNumClient_p2->Location = System::Drawing::Point(79, 66);
+			this->tNumClient_p2->Location = System::Drawing::Point(128, 66);
 			this->tNumClient_p2->Name = L"tNumClient_p2";
 			this->tNumClient_p2->Size = System::Drawing::Size(110, 20);
-			this->tNumClient_p2->TabIndex = 54;
+			this->tNumClient_p2->TabIndex = 1;
 			// 
 			// tDateNaissance_p2
 			// 
-			this->tDateNaissance_p2->Location = System::Drawing::Point(14, 208);
+			this->tDateNaissance_p2->Location = System::Drawing::Point(63, 206);
 			this->tDateNaissance_p2->Name = L"tDateNaissance_p2";
 			this->tDateNaissance_p2->Size = System::Drawing::Size(110, 20);
-			this->tDateNaissance_p2->TabIndex = 53;
+			this->tDateNaissance_p2->TabIndex = 5;
 			// 
 			// label24
 			// 
 			this->label24->AutoSize = true;
-			this->label24->Location = System::Drawing::Point(11, 192);
+			this->label24->Location = System::Drawing::Point(60, 190);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(96, 13);
-			this->label24->TabIndex = 51;
+			this->label24->TabIndex = 0;
 			this->label24->Text = L"Date de naissance";
 			// 
 			// tTypeVoie_p2
 			// 
-			this->tTypeVoie_p2->Location = System::Drawing::Point(14, 331);
+			this->tTypeVoie_p2->Location = System::Drawing::Point(63, 331);
 			this->tTypeVoie_p2->Name = L"tTypeVoie_p2";
 			this->tTypeVoie_p2->Size = System::Drawing::Size(110, 20);
-			this->tTypeVoie_p2->TabIndex = 50;
+			this->tTypeVoie_p2->TabIndex = 8;
 			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(11, 314);
+			this->label17->Location = System::Drawing::Point(60, 314);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(69, 13);
 			this->label17->TabIndex = 49;
@@ -1705,84 +1720,84 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// bAjouter_p2
 			// 
-			this->bAjouter_p2->Location = System::Drawing::Point(151, 431);
+			this->bAjouter_p2->Location = System::Drawing::Point(200, 431);
 			this->bAjouter_p2->Name = L"bAjouter_p2";
 			this->bAjouter_p2->Size = System::Drawing::Size(66, 110);
-			this->bAjouter_p2->TabIndex = 48;
+			this->bAjouter_p2->TabIndex = 12;
 			this->bAjouter_p2->Text = L"Ajouter";
 			this->bAjouter_p2->UseVisualStyleBackColor = true;
 			// 
 			// bMaj_p2
 			// 
-			this->bMaj_p2->Location = System::Drawing::Point(66, 431);
+			this->bMaj_p2->Location = System::Drawing::Point(115, 431);
 			this->bMaj_p2->Name = L"bMaj_p2";
 			this->bMaj_p2->Size = System::Drawing::Size(75, 51);
-			this->bMaj_p2->TabIndex = 47;
+			this->bMaj_p2->TabIndex = 13;
 			this->bMaj_p2->Text = L"Mise à jour";
 			this->bMaj_p2->UseVisualStyleBackColor = true;
 			// 
 			// bSupprimer_p2
 			// 
-			this->bSupprimer_p2->Location = System::Drawing::Point(66, 488);
+			this->bSupprimer_p2->Location = System::Drawing::Point(115, 488);
 			this->bSupprimer_p2->Name = L"bSupprimer_p2";
 			this->bSupprimer_p2->Size = System::Drawing::Size(75, 53);
-			this->bSupprimer_p2->TabIndex = 46;
+			this->bSupprimer_p2->TabIndex = 14;
 			this->bSupprimer_p2->Text = L"Supprimer";
 			this->bSupprimer_p2->UseVisualStyleBackColor = true;
 			// 
 			// tVille_p2
 			// 
-			this->tVille_p2->Location = System::Drawing::Point(148, 381);
+			this->tVille_p2->Location = System::Drawing::Point(197, 381);
 			this->tVille_p2->Name = L"tVille_p2";
 			this->tVille_p2->Size = System::Drawing::Size(110, 20);
-			this->tVille_p2->TabIndex = 45;
+			this->tVille_p2->TabIndex = 11;
 			// 
 			// tCodePostal_p2
 			// 
-			this->tCodePostal_p2->Location = System::Drawing::Point(14, 381);
+			this->tCodePostal_p2->Location = System::Drawing::Point(63, 381);
 			this->tCodePostal_p2->Name = L"tCodePostal_p2";
 			this->tCodePostal_p2->Size = System::Drawing::Size(110, 20);
-			this->tCodePostal_p2->TabIndex = 44;
+			this->tCodePostal_p2->TabIndex = 10;
 			// 
 			// tNomVoie_p2
 			// 
-			this->tNomVoie_p2->Location = System::Drawing::Point(149, 331);
+			this->tNomVoie_p2->Location = System::Drawing::Point(198, 331);
 			this->tNomVoie_p2->Name = L"tNomVoie_p2";
 			this->tNomVoie_p2->Size = System::Drawing::Size(110, 20);
-			this->tNomVoie_p2->TabIndex = 43;
+			this->tNomVoie_p2->TabIndex = 9;
 			// 
 			// tCompAdresse_p2
 			// 
-			this->tCompAdresse_p2->Location = System::Drawing::Point(148, 281);
+			this->tCompAdresse_p2->Location = System::Drawing::Point(197, 281);
 			this->tCompAdresse_p2->Name = L"tCompAdresse_p2";
 			this->tCompAdresse_p2->Size = System::Drawing::Size(110, 20);
-			this->tCompAdresse_p2->TabIndex = 42;
+			this->tCompAdresse_p2->TabIndex = 7;
 			// 
 			// tNumVoie_p2
 			// 
-			this->tNumVoie_p2->Location = System::Drawing::Point(14, 281);
+			this->tNumVoie_p2->Location = System::Drawing::Point(63, 281);
 			this->tNumVoie_p2->Name = L"tNumVoie_p2";
 			this->tNumVoie_p2->Size = System::Drawing::Size(110, 20);
-			this->tNumVoie_p2->TabIndex = 41;
+			this->tNumVoie_p2->TabIndex = 6;
 			// 
 			// tPrenom_p2
 			// 
-			this->tPrenom_p2->Location = System::Drawing::Point(148, 142);
+			this->tPrenom_p2->Location = System::Drawing::Point(197, 154);
 			this->tPrenom_p2->Name = L"tPrenom_p2";
 			this->tPrenom_p2->Size = System::Drawing::Size(110, 20);
-			this->tPrenom_p2->TabIndex = 38;
+			this->tPrenom_p2->TabIndex = 4;
 			// 
 			// tNom_p2
 			// 
-			this->tNom_p2->Location = System::Drawing::Point(14, 142);
+			this->tNom_p2->Location = System::Drawing::Point(63, 154);
 			this->tNom_p2->Name = L"tNom_p2";
 			this->tNom_p2->Size = System::Drawing::Size(110, 20);
-			this->tNom_p2->TabIndex = 37;
+			this->tNom_p2->TabIndex = 3;
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(148, 365);
+			this->label18->Location = System::Drawing::Point(197, 365);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(26, 13);
 			this->label18->TabIndex = 36;
@@ -1791,7 +1806,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(11, 365);
+			this->label19->Location = System::Drawing::Point(60, 365);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(63, 13);
 			this->label19->TabIndex = 35;
@@ -1800,7 +1815,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(146, 261);
+			this->label20->Location = System::Drawing::Point(195, 261);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(113, 13);
 			this->label20->TabIndex = 34;
@@ -1809,16 +1824,16 @@ private: System::ComponentModel::IContainer^ components;
 			// label21
 			// 
 			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(11, 261);
+			this->label21->Location = System::Drawing::Point(60, 261);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(82, 13);
-			this->label21->TabIndex = 33;
+			this->label21->TabIndex = 0;
 			this->label21->Text = L"Numéro de voie";
 			// 
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(146, 314);
+			this->label22->Location = System::Drawing::Point(195, 314);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(67, 13);
 			this->label22->TabIndex = 32;
@@ -1827,16 +1842,16 @@ private: System::ComponentModel::IContainer^ components;
 			// label25
 			// 
 			this->label25->AutoSize = true;
-			this->label25->Location = System::Drawing::Point(146, 126);
+			this->label25->Location = System::Drawing::Point(195, 138);
 			this->label25->Name = L"label25";
 			this->label25->Size = System::Drawing::Size(43, 13);
-			this->label25->TabIndex = 29;
+			this->label25->TabIndex = 0;
 			this->label25->Text = L"Prénom";
 			// 
 			// label26
 			// 
 			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(11, 126);
+			this->label26->Location = System::Drawing::Point(60, 138);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(29, 13);
 			this->label26->TabIndex = 28;
@@ -1847,16 +1862,16 @@ private: System::ComponentModel::IContainer^ components;
 			this->label27->AutoSize = true;
 			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label27->Location = System::Drawing::Point(91, 7);
+			this->label27->Location = System::Drawing::Point(46, 5);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(93, 20);
-			this->label27->TabIndex = 27;
+			this->label27->TabIndex = 0;
 			this->label27->Text = L"Menu Client";
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(359, 208);
+			this->label16->Location = System::Drawing::Point(412, 219);
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(45, 13);
 			this->label16->TabIndex = 4;
@@ -1865,7 +1880,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(359, 12);
+			this->label15->Location = System::Drawing::Point(413, 23);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(33, 13);
 			this->label15->TabIndex = 3;
@@ -1874,18 +1889,18 @@ private: System::ComponentModel::IContainer^ components;
 			// dClient_p2
 			// 
 			this->dClient_p2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dClient_p2->Location = System::Drawing::Point(362, 28);
+			this->dClient_p2->Location = System::Drawing::Point(413, 38);
 			this->dClient_p2->Name = L"dClient_p2";
-			this->dClient_p2->Size = System::Drawing::Size(667, 167);
-			this->dClient_p2->TabIndex = 2;
+			this->dClient_p2->Size = System::Drawing::Size(622, 167);
+			this->dClient_p2->TabIndex = 0;
 			// 
 			// dAdresse_p2
 			// 
 			this->dAdresse_p2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dAdresse_p2->Location = System::Drawing::Point(362, 224);
+			this->dAdresse_p2->Location = System::Drawing::Point(413, 234);
 			this->dAdresse_p2->Name = L"dAdresse_p2";
-			this->dAdresse_p2->Size = System::Drawing::Size(667, 234);
-			this->dAdresse_p2->TabIndex = 1;
+			this->dAdresse_p2->Size = System::Drawing::Size(622, 234);
+			this->dAdresse_p2->TabIndex = 0;
 			// 
 			// panelStock
 			// 
@@ -1913,15 +1928,15 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelStock->Controls->Add(this->label72);
 			this->panelStock->Controls->Add(this->dArticle_p4);
 			this->panelStock->Controls->Add(this->label73);
-			this->panelStock->Location = System::Drawing::Point(3, 1);
+			this->panelStock->Location = System::Drawing::Point(0, 1);
 			this->panelStock->Name = L"panelStock";
-			this->panelStock->Size = System::Drawing::Size(1048, 559);
+			this->panelStock->Size = System::Drawing::Size(1042, 559);
 			this->panelStock->TabIndex = 12;
 			// 
 			// label53
 			// 
 			this->label53->AutoSize = true;
-			this->label53->Location = System::Drawing::Point(160, 178);
+			this->label53->Location = System::Drawing::Point(208, 177);
 			this->label53->Name = L"label53";
 			this->label53->Size = System::Drawing::Size(88, 13);
 			this->label53->TabIndex = 92;
@@ -1929,24 +1944,24 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tReferenceArticle_p4
 			// 
-			this->tReferenceArticle_p4->Location = System::Drawing::Point(163, 192);
+			this->tReferenceArticle_p4->Location = System::Drawing::Point(211, 192);
 			this->tReferenceArticle_p4->Name = L"tReferenceArticle_p4";
 			this->tReferenceArticle_p4->Size = System::Drawing::Size(109, 20);
-			this->tReferenceArticle_p4->TabIndex = 91;
+			this->tReferenceArticle_p4->TabIndex = 4;
 			// 
 			// bRechercheArticle_p4
 			// 
-			this->bRechercheArticle_p4->Location = System::Drawing::Point(113, 110);
+			this->bRechercheArticle_p4->Location = System::Drawing::Point(161, 110);
 			this->bRechercheArticle_p4->Name = L"bRechercheArticle_p4";
 			this->bRechercheArticle_p4->Size = System::Drawing::Size(74, 21);
-			this->bRechercheArticle_p4->TabIndex = 90;
+			this->bRechercheArticle_p4->TabIndex = 2;
 			this->bRechercheArticle_p4->Text = L"Rechercher";
 			this->bRechercheArticle_p4->UseVisualStyleBackColor = true;
 			// 
 			// label36
 			// 
 			this->label36->AutoSize = true;
-			this->label36->Location = System::Drawing::Point(327, 487);
+			this->label36->Location = System::Drawing::Point(418, 493);
 			this->label36->Name = L"label36";
 			this->label36->Size = System::Drawing::Size(50, 13);
 			this->label36->TabIndex = 89;
@@ -1954,18 +1969,19 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tBoxMessage_p4
 			// 
-			this->tBoxMessage_p4->Location = System::Drawing::Point(322, 493);
+			this->tBoxMessage_p4->Location = System::Drawing::Point(411, 506);
 			this->tBoxMessage_p4->Name = L"tBoxMessage_p4";
-			this->tBoxMessage_p4->Size = System::Drawing::Size(712, 40);
-			this->tBoxMessage_p4->TabIndex = 88;
+			this->tBoxMessage_p4->ReadOnly = true;
+			this->tBoxMessage_p4->Size = System::Drawing::Size(624, 38);
+			this->tBoxMessage_p4->TabIndex = 0;
 			this->tBoxMessage_p4->Text = L"";
 			// 
 			// bRetour_p4
 			// 
-			this->bRetour_p4->Location = System::Drawing::Point(1, 1);
+			this->bRetour_p4->Location = System::Drawing::Point(4, 3);
 			this->bRetour_p4->Name = L"bRetour_p4";
 			this->bRetour_p4->Size = System::Drawing::Size(37, 23);
-			this->bRetour_p4->TabIndex = 87;
+			this->bRetour_p4->TabIndex = 12;
 			this->bRetour_p4->Text = L"<<";
 			this->bRetour_p4->UseVisualStyleBackColor = true;
 			this->bRetour_p4->Click += gcnew System::EventHandler(this, &MyForm::bRetour_p4_Click);
@@ -1973,7 +1989,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label38
 			// 
 			this->label38->AutoSize = true;
-			this->label38->Location = System::Drawing::Point(324, 35);
+			this->label38->Location = System::Drawing::Point(412, 37);
 			this->label38->Name = L"label38";
 			this->label38->Size = System::Drawing::Size(36, 13);
 			this->label38->TabIndex = 86;
@@ -1981,15 +1997,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tTauxTVA_p4
 			// 
-			this->tTauxTVA_p4->Location = System::Drawing::Point(27, 320);
+			this->tTauxTVA_p4->Location = System::Drawing::Point(75, 327);
 			this->tTauxTVA_p4->Name = L"tTauxTVA_p4";
 			this->tTauxTVA_p4->Size = System::Drawing::Size(110, 20);
-			this->tTauxTVA_p4->TabIndex = 85;
+			this->tTauxTVA_p4->TabIndex = 7;
 			// 
 			// label52
 			// 
 			this->label52->AutoSize = true;
-			this->label52->Location = System::Drawing::Point(24, 306);
+			this->label52->Location = System::Drawing::Point(72, 312);
 			this->label52->Name = L"label52";
 			this->label52->Size = System::Drawing::Size(72, 13);
 			this->label52->TabIndex = 84;
@@ -1997,70 +2013,70 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// bAjouter_p4
 			// 
-			this->bAjouter_p4->Location = System::Drawing::Point(168, 394);
+			this->bAjouter_p4->Location = System::Drawing::Point(216, 394);
 			this->bAjouter_p4->Name = L"bAjouter_p4";
 			this->bAjouter_p4->Size = System::Drawing::Size(66, 110);
-			this->bAjouter_p4->TabIndex = 83;
+			this->bAjouter_p4->TabIndex = 9;
 			this->bAjouter_p4->Text = L"Ajouter";
 			this->bAjouter_p4->UseVisualStyleBackColor = true;
 			// 
 			// bMaj_p4
 			// 
-			this->bMaj_p4->Location = System::Drawing::Point(83, 394);
+			this->bMaj_p4->Location = System::Drawing::Point(131, 394);
 			this->bMaj_p4->Name = L"bMaj_p4";
 			this->bMaj_p4->Size = System::Drawing::Size(75, 51);
-			this->bMaj_p4->TabIndex = 82;
+			this->bMaj_p4->TabIndex = 10;
 			this->bMaj_p4->Text = L"Mise à jour";
 			this->bMaj_p4->UseVisualStyleBackColor = true;
 			// 
 			// bSupprimer_p4
 			// 
-			this->bSupprimer_p4->Location = System::Drawing::Point(83, 451);
+			this->bSupprimer_p4->Location = System::Drawing::Point(131, 451);
 			this->bSupprimer_p4->Name = L"bSupprimer_p4";
 			this->bSupprimer_p4->Size = System::Drawing::Size(75, 53);
-			this->bSupprimer_p4->TabIndex = 81;
+			this->bSupprimer_p4->TabIndex = 11;
 			this->bSupprimer_p4->Text = L"Supprimer";
 			this->bSupprimer_p4->UseVisualStyleBackColor = true;
 			// 
 			// tPrixHT_p4
 			// 
-			this->tPrixHT_p4->Location = System::Drawing::Point(162, 320);
+			this->tPrixHT_p4->Location = System::Drawing::Point(210, 327);
 			this->tPrixHT_p4->Name = L"tPrixHT_p4";
 			this->tPrixHT_p4->Size = System::Drawing::Size(110, 20);
-			this->tPrixHT_p4->TabIndex = 77;
+			this->tPrixHT_p4->TabIndex = 8;
 			// 
 			// tSeuilReap_p4
 			// 
-			this->tSeuilReap_p4->Location = System::Drawing::Point(26, 264);
+			this->tSeuilReap_p4->Location = System::Drawing::Point(74, 264);
 			this->tSeuilReap_p4->Name = L"tSeuilReap_p4";
 			this->tSeuilReap_p4->Size = System::Drawing::Size(110, 20);
-			this->tSeuilReap_p4->TabIndex = 76;
+			this->tSeuilReap_p4->TabIndex = 5;
 			// 
 			// tQuantiteStock_p4
 			// 
-			this->tQuantiteStock_p4->Location = System::Drawing::Point(161, 264);
+			this->tQuantiteStock_p4->Location = System::Drawing::Point(209, 264);
 			this->tQuantiteStock_p4->Name = L"tQuantiteStock_p4";
 			this->tQuantiteStock_p4->Size = System::Drawing::Size(111, 20);
-			this->tQuantiteStock_p4->TabIndex = 75;
+			this->tQuantiteStock_p4->TabIndex = 6;
 			// 
 			// tDesignation_p4
 			// 
-			this->tDesignation_p4->Location = System::Drawing::Point(27, 192);
+			this->tDesignation_p4->Location = System::Drawing::Point(75, 192);
 			this->tDesignation_p4->Name = L"tDesignation_p4";
 			this->tDesignation_p4->Size = System::Drawing::Size(109, 20);
-			this->tDesignation_p4->TabIndex = 73;
+			this->tDesignation_p4->TabIndex = 3;
 			// 
 			// tRechercheArticle_p4
 			// 
-			this->tRechercheArticle_p4->Location = System::Drawing::Point(93, 84);
+			this->tRechercheArticle_p4->Location = System::Drawing::Point(141, 84);
 			this->tRechercheArticle_p4->Name = L"tRechercheArticle_p4";
 			this->tRechercheArticle_p4->Size = System::Drawing::Size(110, 20);
-			this->tRechercheArticle_p4->TabIndex = 72;
+			this->tRechercheArticle_p4->TabIndex = 1;
 			// 
 			// label58
 			// 
 			this->label58->AutoSize = true;
-			this->label58->Location = System::Drawing::Point(159, 306);
+			this->label58->Location = System::Drawing::Point(207, 312);
 			this->label58->Name = L"label58";
 			this->label58->Size = System::Drawing::Size(57, 13);
 			this->label58->TabIndex = 69;
@@ -2069,7 +2085,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label60
 			// 
 			this->label60->AutoSize = true;
-			this->label60->Location = System::Drawing::Point(16, 251);
+			this->label60->Location = System::Drawing::Point(64, 250);
 			this->label60->Name = L"label60";
 			this->label60->Size = System::Drawing::Size(131, 13);
 			this->label60->TabIndex = 68;
@@ -2078,7 +2094,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label62
 			// 
 			this->label62->AutoSize = true;
-			this->label62->Location = System::Drawing::Point(159, 251);
+			this->label62->Location = System::Drawing::Point(208, 249);
 			this->label62->Name = L"label62";
 			this->label62->Size = System::Drawing::Size(76, 13);
 			this->label62->TabIndex = 66;
@@ -2087,7 +2103,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label71
 			// 
 			this->label71->AutoSize = true;
-			this->label71->Location = System::Drawing::Point(24, 176);
+			this->label71->Location = System::Drawing::Point(72, 176);
 			this->label71->Name = L"label71";
 			this->label71->Size = System::Drawing::Size(63, 13);
 			this->label71->TabIndex = 64;
@@ -2096,7 +2112,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label72
 			// 
 			this->label72->AutoSize = true;
-			this->label72->Location = System::Drawing::Point(104, 68);
+			this->label72->Location = System::Drawing::Point(152, 68);
 			this->label72->Name = L"label72";
 			this->label72->Size = System::Drawing::Size(88, 13);
 			this->label72->TabIndex = 63;
@@ -2105,17 +2121,17 @@ private: System::ComponentModel::IContainer^ components;
 			// dArticle_p4
 			// 
 			this->dArticle_p4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dArticle_p4->Location = System::Drawing::Point(322, 51);
+			this->dArticle_p4->Location = System::Drawing::Point(413, 51);
 			this->dArticle_p4->Name = L"dArticle_p4";
-			this->dArticle_p4->Size = System::Drawing::Size(713, 394);
-			this->dArticle_p4->TabIndex = 62;
+			this->dArticle_p4->Size = System::Drawing::Size(622, 394);
+			this->dArticle_p4->TabIndex = 0;
 			// 
 			// label73
 			// 
 			this->label73->AutoSize = true;
 			this->label73->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label73->Location = System::Drawing::Point(103, 30);
+			this->label73->Location = System::Drawing::Point(46, 5);
 			this->label73->Name = L"label73";
 			this->label73->Size = System::Drawing::Size(94, 20);
 			this->label73->TabIndex = 61;
@@ -2141,9 +2157,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelStatistiques->Controls->Add(this->label84);
 			this->panelStatistiques->Controls->Add(this->dChiffreAffaireMois_p5);
 			this->panelStatistiques->Controls->Add(this->dMontantAchatClient_p5);
-			this->panelStatistiques->Location = System::Drawing::Point(1, 1);
+			this->panelStatistiques->Location = System::Drawing::Point(0, 1);
 			this->panelStatistiques->Name = L"panelStatistiques";
-			this->panelStatistiques->Size = System::Drawing::Size(1047, 564);
+			this->panelStatistiques->Size = System::Drawing::Size(1042, 559);
 			this->panelStatistiques->TabIndex = 13;
 			// 
 			// label70
@@ -2250,10 +2266,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// bRetour_p5
 			// 
-			this->bRetour_p5->Location = System::Drawing::Point(3, 3);
+			this->bRetour_p5->Location = System::Drawing::Point(4, 3);
 			this->bRetour_p5->Name = L"bRetour_p5";
 			this->bRetour_p5->Size = System::Drawing::Size(37, 23);
-			this->bRetour_p5->TabIndex = 89;
+			this->bRetour_p5->TabIndex = 1;
 			this->bRetour_p5->Text = L"<<";
 			this->bRetour_p5->UseVisualStyleBackColor = true;
 			this->bRetour_p5->Click += gcnew System::EventHandler(this, &MyForm::bRetour_p5_Click);
@@ -2263,7 +2279,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label82->AutoSize = true;
 			this->label82->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label82->Location = System::Drawing::Point(98, 15);
+			this->label82->Location = System::Drawing::Point(46, 5);
 			this->label82->Name = L"label82";
 			this->label82->Size = System::Drawing::Size(137, 20);
 			this->label82->TabIndex = 64;
@@ -2321,9 +2337,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelSimulation->Controls->Add(this->cbTVA_p6);
 			this->panelSimulation->Controls->Add(this->bRetour_p6);
 			this->panelSimulation->Controls->Add(this->label75);
-			this->panelSimulation->Location = System::Drawing::Point(1, 0);
+			this->panelSimulation->Location = System::Drawing::Point(0, 1);
 			this->panelSimulation->Name = L"panelSimulation";
-			this->panelSimulation->Size = System::Drawing::Size(1045, 560);
+			this->panelSimulation->Size = System::Drawing::Size(1042, 559);
 			this->panelSimulation->TabIndex = 14;
 			// 
 			// label80
@@ -2387,46 +2403,50 @@ private: System::ComponentModel::IContainer^ components;
 			this->dSimulation_p6->Location = System::Drawing::Point(441, 382);
 			this->dSimulation_p6->Name = L"dSimulation_p6";
 			this->dSimulation_p6->Size = System::Drawing::Size(175, 42);
-			this->dSimulation_p6->TabIndex = 64;
+			this->dSimulation_p6->TabIndex = 0;
 			// 
 			// cbMarge_p6
 			// 
 			this->cbMarge_p6->FormattingEnabled = true;
+			this->cbMarge_p6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"x 5%", L"x 10%", L"x15%" });
 			this->cbMarge_p6->Location = System::Drawing::Point(343, 210);
 			this->cbMarge_p6->Name = L"cbMarge_p6";
 			this->cbMarge_p6->Size = System::Drawing::Size(83, 21);
-			this->cbMarge_p6->TabIndex = 63;
+			this->cbMarge_p6->TabIndex = 2;
 			// 
 			// cbRemiseComm_p6
 			// 
 			this->cbRemiseComm_p6->FormattingEnabled = true;
+			this->cbRemiseComm_p6->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"5%", L"6%" });
 			this->cbRemiseComm_p6->Location = System::Drawing::Point(590, 210);
 			this->cbRemiseComm_p6->Name = L"cbRemiseComm_p6";
 			this->cbRemiseComm_p6->Size = System::Drawing::Size(83, 21);
-			this->cbRemiseComm_p6->TabIndex = 62;
+			this->cbRemiseComm_p6->TabIndex = 3;
 			// 
 			// cbDemarque_p6
 			// 
 			this->cbDemarque_p6->FormattingEnabled = true;
+			this->cbDemarque_p6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"2%", L"3%", L"5%" });
 			this->cbDemarque_p6->Location = System::Drawing::Point(842, 210);
 			this->cbDemarque_p6->Name = L"cbDemarque_p6";
 			this->cbDemarque_p6->Size = System::Drawing::Size(83, 21);
-			this->cbDemarque_p6->TabIndex = 61;
+			this->cbDemarque_p6->TabIndex = 4;
 			// 
 			// cbTVA_p6
 			// 
 			this->cbTVA_p6->FormattingEnabled = true;
+			this->cbTVA_p6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"20%", L"10%", L"5,5%" });
 			this->cbTVA_p6->Location = System::Drawing::Point(118, 210);
 			this->cbTVA_p6->Name = L"cbTVA_p6";
 			this->cbTVA_p6->Size = System::Drawing::Size(83, 21);
-			this->cbTVA_p6->TabIndex = 60;
+			this->cbTVA_p6->TabIndex = 1;
 			// 
 			// bRetour_p6
 			// 
-			this->bRetour_p6->Location = System::Drawing::Point(4, 6);
+			this->bRetour_p6->Location = System::Drawing::Point(4, 3);
 			this->bRetour_p6->Name = L"bRetour_p6";
 			this->bRetour_p6->Size = System::Drawing::Size(37, 23);
-			this->bRetour_p6->TabIndex = 59;
+			this->bRetour_p6->TabIndex = 5;
 			this->bRetour_p6->Text = L"<<";
 			this->bRetour_p6->UseVisualStyleBackColor = true;
 			this->bRetour_p6->Click += gcnew System::EventHandler(this, &MyForm::bRetour_p6_Click);
@@ -2436,7 +2456,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label75->AutoSize = true;
 			this->label75->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label75->Location = System::Drawing::Point(91, 8);
+			this->label75->Location = System::Drawing::Point(46, 5);
 			this->label75->Name = L"label75";
 			this->label75->Size = System::Drawing::Size(127, 20);
 			this->label75->TabIndex = 58;
@@ -2499,6 +2519,7 @@ private: System::ComponentModel::IContainer^ components;
 		this->panelStatistiques->Hide();
 		this->panelStock->Hide();
 		this->panelSimulation->Hide();
+		this->panelMenu->Show();
 	}
 
 
